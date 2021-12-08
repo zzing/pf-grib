@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>캠핑장관리 | 캠핑카 관리</title>
+<link rel="stylesheet" href="../../../css/admin/admin.css">
+<link rel="stylesheet" href="../../../css/admin/reset.css">
+<script src="../../../js/jquery-1.7.1.min.js"></script>
+<script src="../../../js/jquery-ui.js"></script>
+<script type="text/javascript">
+$(function(){
+	//$(".devControl").hide(); 
+	// device Control show
+	$(".devIcon").each(function(){
+		$(this).click(function(){
+			if($(this).parents("tr").next(".devControl").css("display")=="table-row"){
+				$(this).parents("tr").next().slideUp();
+				$(this).css({"backgroundImage":"url(../../../images/admin/accordion_down.png)"})
+				return false;
+			}else{
+				$(this).css({"backgroundImage":"url(../../../images/admin/accordion_up.png)"})
+			}
+			$(this).parents("tr").next().slideDown();
+		});
+	});
+});
+</script>
+</head>
+<body class="body">
+	<div class="wrap">
+		<div class="headWrap">
+			<div id="header">
+				<a href="#"></a>
+				<div>
+					<div>admin1 님</div>
+					<a href="#" class="logout">로그아웃</a>
+				</div>
+			</div>
+		</div>
+
+		<ul id="side">
+			<li><span><img src="../../../images/admin/resv_mng_ico.png" alt="예약 관리 아이콘">예약 관리</span>
+				<dl>
+					<dd><a href="#">예약 목록</a></dd>
+					<dd><a href="#">예약 등록</a></dd>
+					<dd><a href="#">알림발송내역</a></dd>
+				</dl>
+			</li>
+			<li><span><img src="../../../images/admin/camp_mng_ico.png" alt="캠핑장 관리 아이콘">캠핑장 관리</span>
+				<dl>
+					<dd><a href="#">캠핑장 정보</a></dd>
+					<dd class="focus"><a href="#">캠핑장 관리</a></dd>
+				</dl>
+			</li>
+			<li><span><img src="../../../images/admin/user_mng_ico.png" alt="사용자 관리 아이콘">사용자 관리</span>
+				<dl>
+					<dd><a href="#">사용자 목록</a></dd>
+				</dl>
+			</li>
+		</ul>
+
+		<!-- main 영역 S. -->
+		<div class="main resvList">
+			<!-- 책갈피 영역 S. -->		
+			<div>
+				<div>
+					<h1>캠핑카 관리</h1>
+					<h2><span>캠핑장 관리</span> &gt; 캠핑카 관리</h2>
+				</div>
+			</div>
+			<!-- 책갈피 영역 E. -->
+			<!-- 검색 영역 S. -->
+			<div class="sortValue">
+				<table>
+					<caption>캠핑카 관리 검색 조건 테이블</caption>
+					<tbody>
+						<tr>
+							<th>캠핑장 번호</th>
+							<td colspan="2">
+						<select id="searchCampGrdId" name="searchCampGrdId" onchange="fn_campCar_selectBoxCreate(this.value);">
+						</select>
+						</td>						
+						</tr>
+						<tr>
+							<th>캠핑카 번호</th>
+							<td colspan="2">
+								<select id="searchCampCarId" name="searchCampCarId">
+								</select>
+							</td>
+						</tr>		
+						<tr>
+							<th>검색어</th>
+							<td>
+								<select id="searchCondition" name="searchCondition">
+									<option value="sc01"></option>
+									<option value="sc02">도어락 ID</option>
+									<option value="sc03">모델명</option>
+									<option value="sc04">NFC TAG ID</option>			
+								</select>
+							</td>
+							<td> 
+								<label for="searchKeyword"><input type="text" id="searchKeyword" class="searchKeyword" name="searchKeyword" value="${searchKeyword}"></label>
+							</td>
+						</tr>
+					</tbody>
+				</table>			
+			</div>
+			<a href="#" class="search search_exp" onclick="fn_search();">검 색</a><!-- 검색 버튼 -->
+			
+			<!-- 테이블 영역 S. -->
+			<div class="tableWrap">
+				<table>
+					<caption>캠핑카 목록 리스트</caption>
+					<colgroup>
+							<col width="4%">
+							<col width="9%">
+							<col width="10%">
+							<col width="10%">
+							<col width="21%">
+							<col width="26%">
+							<col width="6%">
+							<col width="6%">
+							<col width="4%">
+							<col width="4%">
+						</colgroup>
+					<thead>
+						<tr>
+							<th>번호</th>
+							<th>캠핑카 번호</th>
+							<th>캠핑카 ID</th>
+							<th>도어락 ID</th>
+							<th>모델명</th>
+							<th>특이사항</th>
+							<th>이력보기</th>
+							<th>기기 제어</th>
+							<th>수정</th>
+							<th>삭제</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>3</td>
+							<td>캠핑카 3</td>
+							<td>?????</td>
+							<td>?????</td>
+							<td>키스톤 - 299bh (5~7인용)</td>
+							<td>-</td>
+							<td><a href="#"><img src="../../../images/admin/door_history_ico.png"></a></td>
+							<td><a href="#" class="devIcon"><span>제어</span></a></td>
+							<td><a href="#"><img src="../../../images/admin/fix_ico.png"></a></td>
+							<td><a href="#"><img src="../../../images/admin/del_ico.png"></a></td>
+						</tr>
+						<tr class="devControl">
+							<td colspan="10">
+								<ul>
+									<li class="active">
+										<span>에어컨</span>
+										<a href="#" class="box">
+											<span class="toggle_btn"></span>
+										</a>
+									</li>
+									<li>
+										<span>TV</span>
+										<a href="#" class="box">
+											<span class="toggle_btn"></span>
+										</a>
+									</li>
+									<li class="error">
+										<span>인덕션</span>
+										<a href="#" class="box">
+											<span class="toggle_btn"></span>
+										</a>
+									</li>
+									<li class="active">
+										<span>온수기</span>
+										<a href="#" class="box">
+											<span class="toggle_btn"></span>
+										</a>
+									</li>
+									<li class="error">
+										<span>오디오</span>
+										<a href="#" class="box">
+											<span class="toggle_btn"></span>
+										</a>
+									</li>
+									<li>
+										<span>냉장고</span>
+										<a href="#" class="box">
+											<span class="toggle_btn"></span>
+										</a>
+									</li>
+									<li>
+										<span>전자레인지</span>
+										<a href="#" class="box">
+											<span class="toggle_btn"></span>
+										</a>
+									</li>
+									<li class="active">
+										<span>도어락</span>
+										<a href="#" class="doorLock">
+											<span class="toggle_btn"></span>
+										</a>
+									</li>
+									<li>
+										<span>전등1</span>
+										<a href="#" class="box">
+											<span class="toggle_btn"></span>
+										</a>
+									</li>
+									<li>
+										<span>전등2</span>
+										<a href="#" class="box">
+											<span class="toggle_btn"></span>
+										</a>
+									</li>
+									<li>
+										<span>차양막</span>
+										<a href="#" class="box">
+											<span class="toggle_btn"></span>
+										</a>
+									</li>
+								</ul>
+							</td>
+						</tr>
+						<tr>
+							<td>2</td>
+							<td>캠핑카 2</td>
+							<td>?????</td>
+							<td>?????</td>
+							<td>키스톤 - 299bh (5~7인용)</td>
+							<td>도어락 수리 필요</td>
+							<td><a href="#"><img src="../../../images/admin/door_history_ico.png"></a></td>
+							<td><a href="#" class="devIcon">제어</a></td>
+							<td><a href="#"><img src="../../../images/admin/fix_ico.png"></a></td>
+							<td><a href="#"><img src="../../../images/admin/del_ico.png"></a></td>
+						</tr>
+						<tr class="devControl">
+							<td colspan="10">
+								<p>등록된 기기가 없습니다.</p>
+							</td>
+						</tr>
+						<tr>
+							<td>1</td>
+							<td>캠핑카 1</td>
+							<td>?????</td>
+							<td>?????</td>
+							<td>키스톤 - 299bh (5~7인용)</td>
+							<td>우측 전면 타이어 수리 필요</td>
+							<td><a href="#"><img src="../../../images/admin/door_history_ico.png"></a></td>
+							<td><a href="#" class="devIcon">제어</a></td>
+							<td><a href="#"><img src="../../../images/admin/fix_ico.png"></a></td>
+							<td><a href="#"><img src="../../../images/admin/del_ico.png"></a></td>
+						</tr>
+						<tr class="devControl">
+							<td colspan="10">
+								<ul>
+									<li>
+										<span>에어컨</span>
+										<a href="#" class="box">
+											<span class="toggle_btn"></span>
+										</a>
+									</li>
+									<li>
+										<span>TV</span>
+										<a href="#" class="box">
+											<span class="toggle_btn"></span>
+										</a>
+									</li>
+									<li>
+										<span>인덕션</span>
+										<a href="#" class="box">
+											<span class="toggle_btn"></span>
+										</a>
+									</li>
+									<li>
+										<span>온수기</span>
+										<a href="#" class="box">
+											<span class="toggle_btn"></span>
+										</a>
+									</li>
+									<li>
+										<span>오디오</span>
+										<a href="#" class="box">
+											<span class="toggle_btn"></span>
+										</a>
+									</li>
+									<li>
+										<span>냉장고</span>
+										<a href="#" class="box">
+											<span class="toggle_btn"></span>
+										</a>
+									</li>
+									<li>
+										<span>전자레인지</span>
+										<a href="#" class="box">
+											<span class="toggle_btn"></span>
+										</a>
+									</li>
+									<li>
+										<span>도어락</span>
+										<a href="#" class="doorLock">
+											<span class="toggle_btn"></span>
+										</a>
+									</li>
+									<li>
+										<span>전등1</span>
+										<a href="#" class="box">
+											<span class="toggle_btn"></span>
+										</a>
+									</li>
+									<li>
+										<span>전등2</span>
+										<a href="#" class="box">
+											<span class="toggle_btn"></span>
+										</a>
+									</li>
+									<li>
+										<span>차양막</span>
+										<a href="#" class="box">
+											<span class="toggle_btn"></span>
+										</a>
+									</li>
+								</ul>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<!-- 테이블 영역 E. -->
+			
+			<!-- 페이징 영역 S. -->
+			<div class="btn">
+				<ul class="pagination">
+					<li><a href="#"></a></li>
+					<li><a class="page" href="#">1</a></li>
+					<li><a href="#">2</a></li>
+					<li><a href="#">3</a></li>
+					<li class="dir"><a href="#"></a></li>
+				</ul>
+				<a href="#" class="enroll">등 록</a>
+			</div>
+			<!-- 페이징 영역 E. -->
+		</div>
+		<!-- main 영역 E. -->
+		<!-- footer 영역 S. -->
+		<div id="footer">
+			<div>
+				<p><img src="${pageContext.request.contextPath}/images/admin/footer_grib_logo.png" alt="그립 로고"></p>
+				<div>
+					<address>서울특별시 서초구 효령로 242 서양빌딩 5층 (주)그립  대표전화 : 02)521-6542  기업고객 : 070-7011-2825 </address>
+					Copyright @ 2016 grib Inc. All rights reserved.
+				</div>
+				<ul>
+					<li><a href="#" class="btn_reqcont">제휴문의</a></li>
+					<li><a href="#" target="_blank">회사소개서</a></li>
+					<li><a href="#" target="_blank">제품소개서</a></li>
+				</ul>
+			</div>
+		</div>
+		<!-- footer 영역 E. -->
+		<div class="dimmed"></div>
+		<!-- pop 영역 S. -->
+		<div class="pop proposal">
+			<h1>알림</h1>
+			<a href="#" class="btn_close"></a>
+			<div>
+				<p class="txt"> 프로젝트 진행에 관련된 문의를 남겨 주시면<br>검토 후 연락 드리겠습니다.</p>
+				<table class="tb_proposal">
+					<caption>제휴제안 내용</caption>
+					<colgroup>
+						<col style="width:15%;">
+						<col style="width:35%">
+						<col style="width:15%;">
+						<col style="width:35%">
+					</colgroup>
+					<tbody>
+						<tr>
+							<th scope="row">
+								<label for="reqSenderNm">이름</label>
+							</th>
+							<td><input class="" type="text" id="reqSenderNm"></td>
+							<th scope="row" class="no_bgcolor">
+								<label for="reqSenderEmail">E-mail</label>
+							</th>
+							<td><input class="" type="email" id="reqSenderEmail"></td>
+						</tr>
+
+						<tr>
+							<th scope="row">
+								<label for="reqSenderCompanyNm">회사명</label>
+							</th>
+							<td><input class="" type="text" id="reqSenderCompanyNm"></td>
+							<th scope="row" class="no_bgcolor">
+								<label for="reqTelNum">연락처</label>
+							</th>
+							<td><input class="" type="text" id="reqTelNum"></td>
+						</tr>
+
+						<tr>
+							<th scope="row">
+								<label for="mailTitle">문의 제목</label>
+							</th>
+							<td colspan="3"><input id="reqMailTitle" class="intxt_subject" type ="text"></td>
+						</tr>
+						
+						<tr>
+							<th scope="row">
+								<label for="reqMailContents">문의 내용</label>
+							</th>
+							<td colspan="3">
+								<textarea rows="7" id="reqMailContents"></textarea>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+				<div class="btn">
+					<div>
+						<a href="#" class="req_pop_cancel">취 소</a>
+						<a href="#" onclick="fnc_ReqMailSend();return false;"class="pop_submit">전 송</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- pop 영역 E. -->
+	</div>
+</body>
+</html>

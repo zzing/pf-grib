@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>예약관리 | 상세예약정보</title>
+<link rel="stylesheet" href="../../../css/admin/admin.css">
+<link rel="stylesheet" href="../../../css/admin/reset.css">
+<script src="../../../js/jquery-1.7.1.min.js"></script>
+<script src="../../../js/jquery-ui.js"></script>
+<script src="../../../js/admin/common.js"></script>
+</head>
+<body class="body">
+	<div class="wrap">
+		<div class="headWrap">
+			<div id="header">
+				<a href="#"></a>
+				<div>
+					<div>admin1 님</div>
+					<a href="#" class="logout">로그아웃</a>
+				</div>
+			</div>
+		</div>
+
+		<ul id="side">
+			<li><span><img src="../../../images/admin/resv_mng_ico.png" alt="예약 관리 아이콘">예약 관리</span>
+				<dl>
+					<dd class="focus"><a href="#">예약 목록</a></dd>
+					<dd><a href="#">예약 등록</a></dd>
+					<dd><a href="#">알림발송내역</a></dd>
+				</dl>
+			</li>
+			<li><span><img src="../../../images/admin/camp_mng_ico.png" alt="캠핑장 관리 아이콘">캠핑장 관리</span>
+				<dl>
+					<dd><a href="#">캠핑장 정보</a></dd>
+					<dd><a href="#">캠핑장 관리</a></dd>
+				</dl>
+			</li>
+			<li><span><img src="../../../images/admin/user_mng_ico.png" alt="사용자 관리 아이콘">사용자 관리</span>
+				<dl>
+					<dd><a href="#">사용자 목록</a></dd>
+				</dl>
+			</li>
+		</ul>
+
+		<div class="main">
+			<div>
+				<div>
+					<h1>예약목록</h1>
+					<h2><span>예약관리</span> &gt; 예약목록 &gt; 상세 예약정보</h2>
+				</div>
+				<div>
+					<h3>상세 예약정보</h3>
+				</div>
+			</div>
+			<table class="tb_manage info">
+				<caption>예약 상세 예약정보</caption>
+					<tr>
+						<th>이름</th>
+						<td>홍길동</td>
+					</tr>
+					<tr>
+						<th>휴대폰 번호</th>
+						<td>010-1234-5678</td>
+					</tr>
+					<tr>
+						<th>캠핑장 명</th>
+						<td>강원도 춘천 노을 캠핑장</td>
+					</tr>
+					<tr>
+						<th>캠핑카 번호</th>
+						<td>캠핑카 23/키스톤 - 299bh (5~7인용)</td>
+					</tr>
+					<tr>
+						<th>사용자 예약일</th>
+						<td>2016년 03월 03일</td>
+					</tr>
+					<tr>
+						<th>사용시작 날짜</th>
+						<td>2016년 03월 05일</td>
+					</tr>
+					<tr>
+						<th>사용시작 시간</th>
+						<td>09시</td>
+					</tr>
+					<tr>
+						<th>사용종료 날짜</th>
+						<td>2016년 05월 07일</td>
+					</tr>
+					<tr>
+						<th>사용종료 시간</th>
+						<td>16시</td>
+					</tr>
+			</table>
+			<div class="btn">
+				<a href="#" class="sendSMS">SMS 알림 전송</a>
+				<div>
+					<a href="#" class="modify">수 정</a>
+					<a href="#" class="delete">삭 제</a>
+					<a href="#" class="list">목 록</a>
+				</div>
+			</div>
+		</div>
+		<div id="footer">
+			<div>
+				<p><img src="../../../images/admin/footer_grib_logo.png" alt="그립 로고"></p>
+				<div>
+					<address>서울특별시 서초구 효령로 242 서양빌딩 5층 (주)그립  대표전화 : 02)521-6542  기업고객 : 070-7011-2825 </address>
+					Copyright @ 2016 grib Inc. All rights reserved.
+				</div>
+				<ul>
+					<li><a href="#" class="btn_reqcont">제휴문의</a></li>
+					<li><a href="#" target="_blank">회사소개서</a></li>
+					<li><a href="#" target="_blank">제품소개서</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="pop_wrap">
+			<div class="dimmed"></div>
+			<div class="pop edit">
+				<h1>SMS 알림 전송</h1>
+				<a href="#none" class="btn_close"></a>
+				<div>
+					<table class="tb_sms">
+						<caption>SMS 알림 전송 편집</caption>
+						<tbody>
+							<tr>
+								<th><label for="">이름</label></th>
+								<td><input type="text" class="p_user"></td>
+							</tr>
+							<tr>
+								<th>휴대폰 번호</th>
+								<td>
+									<select class="numSelect">
+										<option>010</option>
+										<option>011</option>
+										<option>016</option>
+									</select>
+									<span class="dash">-</span>
+									<label for=""><input type="tel" class="p_tel"></label>
+									<span class="dash">-</span>
+									<label for=""><input type="tel" class="p_tel"></label>
+								</td>
+							</tr>
+							<tr>
+								<th><label for="">내용</label></th>
+								<td>
+									<textarea rows="7">
+									</textarea>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+					<p class="txt">위 휴대폰 번호로 SMS 알림을 전송하시겠습니까?</p>
+					<div class="btn">
+						<div>
+							<a href="#" class="cancel">취 소</a>
+							<a href="#" class="submit">전 송</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="pop proposal">
+				<h1>알림</h1>
+				<a href="#" class="btn_close"></a>
+				<div>
+					<p class="txt"> 프로젝트 진행에 관련된 문의를 남겨 주시면<br>검토 후 연락 드리겠습니다.</p>
+					<table class="tb_proposal">
+						<caption>제휴제안 내용</caption>
+						<colgroup>
+							<col style="width:15%;">
+							<col style="width:35%">
+							<col style="width:15%;">
+							<col style="width:35%">
+						</colgroup>
+						<tbody>
+							<tr>
+								<th scope="row">
+									<label for="">이름</label>
+								</th>
+								<td><input class="" type="text" id=""></td>
+								<th scope="row">
+									<label for="">E-mail</label>
+								</th>
+								<td><input class="" type="text" id=""></td>
+							</tr>
+
+							<tr>
+								<th scope="row">
+									<label for="">회사명</label>
+								</th>
+								<td><input class="" type="text" id=""></td>
+								<th scope="row">
+									<label for="">연락처</label>
+								</th>
+								<td><input class="" type="text" id="p_telnum"></td>
+							</tr>
+
+							<tr>
+								<th scope="row">
+									<label for="">문의 제목</label>
+								</th>
+								<td colspan="3"><input id="" class="intxt_subject" type ="text"></td>
+							</tr>
+							
+							<tr>
+								<th scope="row">
+									<label for="">문의 내용</label>
+								</th>
+								<td colspan="3">
+									<textarea rows="8" id=""></textarea>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+					<div class="btn">
+						<div>
+							<a href="#" class="cancel"><span>취 소</span></a>
+							<a href="#" class="submit"><span>전 송</span></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

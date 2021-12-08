@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>사용자 관리 | 사용자 목록</title>
+<link rel="stylesheet" href="./../../css/admin/admin.css">
+<link rel="stylesheet" href="./../../css/admin/reset.css">
+<script src="./../../js/jquery-1.7.1.min.js"></script>
+<script src="./../../js/jquery-ui.js"></script>
+<script src="./../../js/admin/common.js"></script>
+</head>
+<body>
+	<div class="wrap">
+		<div class="main resvList">
+			<div>
+				<div>
+					<h1>사용자 관리</h1>
+					<h2><span>사용자 관리</span> &gt; 사용자 목록</h2>
+				</div>
+			</div>
+			<!-- 검색 영역 S. -->
+			<div class="sortValue userSort">
+				<div>
+					<span class="opt">캠핑장 번호</span>
+						<select id="campGrdId" name="campGrdId">
+						</select>
+				</div>
+				<div>
+					<span class="opt">검색어</span>
+					<select id="searchCondition" name="searchCondition">
+						<option>이 름</option>
+						<option>아이디</option>
+						<option>휴대폰번호</option>
+						<option>이메일</option>
+					</select> 
+					<label for="searchKeyword"><input type="text" id="searchKeyword" name="searchKeyword" value=""></label>
+				</div>
+			</div>
+			<a href="#" class="search" onclick="fn_search();">검 색</a>
+			<!-- 검색 영역 E. -->
+			<div class="tableWrap">
+				<table>
+					<caption>사용자 목록 리스트</caption>
+					<colgroup>
+							<col width="5%">
+							<col width="9%">
+							<col width="13%">
+							<col width="25%">
+							<col width="23%">
+							<col width="13%">
+							<col width="6%">
+							<col width="6%">
+						</colgroup>
+					<thead>
+						<tr>
+							<th>번호</th>
+							<th>관리자ID</th>
+							<th>이름</th>
+							<th>휴대폰 번호</th>
+							<th>E-mail</th>
+							<th>가입일자</th>
+							<th>수정</th>
+							<th>삭제</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>3</td>
+							<td>admin</td>
+							<td>홍길동</td>
+							<td>010-1111-1111</td>
+							<td>abcd@naver.com</td>
+							<td>2016-05-02</td>
+							<td><a href="#"><img src="./../../images/admin/fix_ico.png" alt="수정아이콘"></a></td>
+							<td><a href="#"><img src="./../../images/admin/del_ico.png" alt="삭제아이콘"></a></td>
+						</tr>
+						<tr class="even">
+							<td>2</td>
+							<td>test2</td>
+							<td>홍길동</td>
+							<td>010-1111-1111</td>
+							<td>abcd@naver.com</td>
+							<td>2016-05-02</td>
+							<td><a href="#"><img src="./../../images/admin/fix_ico.png" alt="수정아이콘"></a></td>
+							<td><a href="#"><img src="./../../images/admin/del_ico.png" alt="삭제아이콘"></a></td>
+						</tr>
+						<tr>
+							<td>1</td>
+							<td>test1</td>
+							<td>홍길동</td>
+							<td>010-1111-1111</td>
+							<td>abcd@naver.com</td>
+							<td>2016-05-02</td>
+							<td><a href="#"><img src="./../../images/admin/fix_ico.png" alt="수정아이콘"></a></td>
+							<td><a href="#"><img src="./../../images/admin/del_ico.png" alt="삭제아이콘"></a></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

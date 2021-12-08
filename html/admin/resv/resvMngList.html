@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>예약관리 | 예약목록</title>
+<link rel="stylesheet" href="../../../css/admin/admin.css">
+<link rel="stylesheet" href="../../../css/admin/reset.css">
+<script src="../../../js/jquery-1.7.1.min.js"></script>
+<script src="../../../js/jquery-ui.js"></script>
+<script src="../../../js/admin/common.js"></script>
+</head>
+<body class="body">
+	<div class="wrap">
+		<div class="headWrap">
+			<div id="header">
+				<a href="#"></a>
+				<div>
+					<div>admin1 님</div>
+					<a href="#" class="logout"></a>
+				</div>
+			</div>
+		</div>
+
+		<ul id="side">
+			<li><span><img src="../../../images/admin/resv_mng_ico.png" alt="예약 관리 아이콘">예약 관리</span>
+				<dl>
+					<dd class="focus"><a href="#">예약 목록</a></dd>
+					<dd><a href="#">예약 등록</a></dd>
+					<dd><a href="#">알림발송내역</a></dd>
+				</dl>
+			</li>
+			<li><span><img src="../../../images/admin/camp_mng_ico.png" alt="캠핑장 관리 아이콘">캠핑장 관리</span>
+				<dl>
+					<dd><a href="#">캠핑장 정보</a></dd>
+					<dd><a href="#">캠핑장 관리</a></dd>
+				</dl>
+			</li>
+			<li><span><img src="../../../images/admin/user_mng_ico.png" alt="사용자 관리 아이콘">사용자 관리</span>
+				<dl>
+					<dd><a href="#">사용자 목록</a></dd>
+				</dl>
+			</li>
+		</ul>
+
+		<div class="main resvList">
+			<div>
+				<div>
+					<h1>예약목록</h1>
+					<h2><span>예약관리</span> &gt; 예약목록</h2>
+				</div>
+			</div>
+				<div class="resvSort">
+					<div>
+						<span class="opt">캠핑카 번호</span>
+						<select>
+							<option>전체</option>
+							<option>캠핑카 01 / 키스톤 - 299bh (5~7인용)</option>
+						</select> 
+						<span class="opt">조회기간</span>
+						<input type="text" id="a" class="toDate datepicker" placeholder="사용시작 날짜">
+						<label for="a"></label>
+						<span>~</span>
+						<input type="text" id="b" class="fromDate datepicker" placeholder="사용종료 날짜">
+						<label for="b"></label>
+					</div>
+					<div>
+						<span class="opt">검색어</span>
+						<select>
+							<option>이름</option>
+							<option>휴대폰 번호</option>
+						</select> 
+						<label for=""><input type="text" id=""></label>
+					</div>
+				</div>
+				<a href="#" class="search"></a>
+			<div>정렬 :
+				<label for="arrgLast"><input type="radio" id="arrgLast" name="sort" checked>최신순</label>
+				<label for="arrgName"><input type="radio" id="arrgName" name="sort">이름순</label>
+				<label for="arrgCamp"><input type="radio" id="arrgCamp" name="sort">캠핑카순</label>
+			</div>
+	
+			<div class="tableWrap">
+				<table>
+					<caption>예약 목록 리스트</caption>
+					<colgroup>
+							<col width="5%">
+							<col width="9%">
+							<col width="15%">
+							<col width="12%">
+							<col width="33%">
+							<col width="13%">
+							<col width="13%">
+						</colgroup>
+					<thead>
+						<tr>
+							<th>번호</th>
+							<th>이름</th>
+							<th>휴대폰 번호</th>
+							<th>캠핑장</th>
+							<th>캠핑카</th>
+							<th>사용시작 날짜</th>
+							<th>사용종료 날짜</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>3</td>
+							<td>홍길동</td>
+							<td>010-1111-1111</td>
+							<td>xxxx캠핑장</td>
+							<td>캠핑카 16 / 키스톤 - 299bh (5~7인용)</td>
+							<td>2016-05-02</td>
+							<td>2016-05-05</td>
+						</tr>
+						<tr>
+							<td>3</td>
+							<td>홍길동</td>
+							<td>010-1111-1111</td>
+							<td>xxxx캠핑장</td>
+							<td>캠핑카 16 / 키스톤 - 299bh (5~7인용)</td>
+							<td>2016-05-02</td>
+							<td>2016-05-05</td>
+						</tr>
+						<tr>
+							<td>3</td>
+							<td>홍길동</td>
+							<td>010-1111-1111</td>
+							<td>xxxx캠핑장</td>
+							<td>캠핑카 16 / 키스톤 - 299bh (5~7인용)</td>
+							<td>2016-05-02</td>
+							<td>2016-05-05</td>
+						</tr>
+						<tr>
+							<td>3</td>
+							<td>홍길동</td>
+							<td>010-1111-1111</td>
+							<td>xxxx캠핑장</td>
+							<td>캠핑카 16 / 키스톤 - 299bh (5~7인용)</td>
+							<td>2016-05-02</td>
+							<td>2016-05-05</td>
+						</tr>
+						<tr>
+							<td>3</td>
+							<td>홍길동</td>
+							<td>010-1111-1111</td>
+							<td>xxxx캠핑장</td>
+							<td>캠핑카 16 / 키스톤 - 299bh (5~7인용)</td>
+							<td>2016-05-02</td>
+							<td>2016-05-05</td>
+						</tr>
+						<tr>
+							<td>3</td>
+							<td>홍길동</td>
+							<td>010-1111-1111</td>
+							<td>xxxx캠핑장</td>
+							<td>캠핑카 16 / 키스톤 - 299bh (5~7인용)</td>
+							<td>2016-05-02</td>
+							<td>2016-05-05</td>
+						</tr>
+						<tr>
+							<td>3</td>
+							<td>홍길동</td>
+							<td>010-1111-1111</td>
+							<td>xxxx캠핑장</td>
+							<td>캠핑카 16 / 키스톤 - 299bh (5~7인용)</td>
+							<td>2016-05-02</td>
+							<td>2016-05-05</td>
+						</tr>
+						<tr>
+							<td>3</td>
+							<td>홍길동</td>
+							<td>010-1111-1111</td>
+							<td>xxxx캠핑장</td>
+							<td>캠핑카 16 / 키스톤 - 299bh (5~7인용)</td>
+							<td>2016-05-02</td>
+							<td>2016-05-05</td>
+						</tr>
+						<tr>
+							<td>3</td>
+							<td>홍길동</td>
+							<td>010-1111-1111</td>
+							<td>xxxx캠핑장</td>
+							<td>캠핑카 16 / 키스톤 - 299bh (5~7인용)</td>
+							<td>2016-05-02</td>
+							<td>2016-05-05</td>
+						</tr>
+						<tr>
+							<td>3</td>
+							<td>홍길동</td>
+							<td>010-1111-1111</td>
+							<td>xxxx캠핑장</td>
+							<td>캠핑카 16 / 키스톤 - 299bh (5~7인용)</td>
+							<td>2016-05-02</td>
+							<td>2016-05-05</td>
+						</tr>
+						<tr>
+							<td>3</td>
+							<td>홍길동</td>
+							<td>010-1111-1111</td>
+							<td>xxxx캠핑장</td>
+							<td>캠핑카 16 / 키스톤 - 299bh (5~7인용)</td>
+							<td>2016-05-02</td>
+							<td>2016-05-05</td>
+						</tr>
+				
+						
+					</tbody>
+				</table>
+			</div>	
+			
+			<div class="btn" id="paging">
+				<ul class="pagination">
+					<li><a href="#"></a></li>
+					<li><a class="page" href="#">1</a></li>
+					<li><a href="#">2</a></li>
+					<li><a href="#">3</a></li>
+					<li class="dir"><a href="#"></a></li>
+				</ul>
+				<a href="#" class="enroll"></a>
+			</div>
+		</div>
+		<div id="footer">
+			<div>
+				<p><img src="../../../images/admin/footer_grib_logo.png" alt="그립 로고"></p>
+				<div>
+					<address>서울특별시 서초구 효령로 242 서양빌딩 5층 (주)그립  대표전화 : 02)521-6542  기업고객 : 070-7011-2825 </address>
+					Copyright @ 2016 grib Inc. All rights reserved.
+				</div>
+				<ul>
+					<li><a href="#" class="btn_reqcont">제휴문의</a></li>
+					<li><a href="#" target="_blank">회사소개서</a></li>
+					<li><a href="#" target="_blank">제품소개서</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

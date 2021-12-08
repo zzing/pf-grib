@@ -1,0 +1,64 @@
+@charset "utf-8";
+
+
+html,body{height:100%}
+
+/*All device*/
+#wrap{position:relative;width:100%;min-height:100%;padding-bottom:71px;text-align:center;font-weight:700;box-sizing:border-box}
+	#wrap .login{position:absolute;width:81.1%;height:278px;top:50%;left:50%;margin:-139px 0 0 -40.55%}
+	#wrap .login > p:first-child{width:100%;height:40px;background:url("../../images/app/login_logo.png") center center scroll no-repeat;background-size:197px auto}
+	#wrap .loginCheck{overflow:hidden;width:100%;margin-top:53px;border:1px solid #d5d5d5}
+	#wrap .loginCheck h1{padding:5px 0;background-color:#43a9da;color:#fff;font-size:1.143em}
+	#wrap .loginCheck h2{margin:14px 16px 0;color:#919191;font-size:1em;text-align:left}
+	#wrap .loginCheck .userNum{overflow:hidden;width:100%;padding:19px 21px;box-sizing:border-box}
+	.loginCheck select,
+	.loginCheck span.dash,
+	.loginCheck input[type="tel"]{float:left}
+	.loginCheck select{width:27.1%;padding:1px 0}
+	.loginCheck span.dash{margin:2px 7px}
+	.loginCheck input[type="tel"]{width:25.4%;height:20px;text-align:center}
+	.loginCheck .btnGroup{overflow:hidden;width:100%;padding:0 2.5%;margin:0 auto 9px;box-sizing:border-box}
+	.loginCheck .btnGroup a{float:left;width:48.2%;padding:9px 0;border-radius:5px;background-color:#43a9da;color:#fff;font-size:1.071em;text-align:center}
+	.loginCheck .btnGroup a.delete{margin-left:3.4%;background-color:#b2b2b2}
+
+
+.header{position:relative;overflow:hidden;padding:21px 0;background-color:#43a9da}
+	.header p{width:39%;height:28px;margin:0 auto;background-image:url("../../images/app/g_platform_logo.png");background-position:center;background-repeat:no-repeat;background-size:140px auto}
+	.header a{position:absolute;top:25px;right:18px;width:20px;height:20px;background:url("../../images/app/refresh_ico.png") left top scroll no-repeat;background-size:20px auto}
+
+.main{position:relative}
+	ul.tabMenu{position:relative;width:100%;padding:0 7px;box-sizing:border-box}
+	ul.tabMenu > li:first-child{padding-top:47px}
+	ul.tabMenu > li > h2{position:absolute;top:0;left:0;width:33%;height:47px;padding-top:9px;border-bottom:1px solid #ccc;background-color:#e8e8e8;font-size:1em;box-sizing:border-box}
+	ul.tabMenu > li:first-child > h2{padding-left:7px}
+	ul.tabMenu > li:last-child > h2{padding-right:7px}
+	ul.tabMenu > li > h2 a{display:block;color:#a7a7a7;line-height:37px}
+	ul.tabMenu > li:nth-child(2) > h2{width:34%; left:33%}
+	ul.tabMenu > li:nth-child(3) > h2{left:67%}
+	ul.tabMenu > li.focus > h2 a{border:1px solid #ccc;border-bottom:none;border-top-left-radius:5px;border-top-right-radius:5px;background-color:#fff;color:#000}
+	ul.tabMenu > li .detail{position:relative;display:none;width:100%;margin-top:10px;border:1px solid #ccc;border-radius:5px;text-align:left;box-sizing:border-box}
+	ul.tabMenu > li.focus .detail{display:block}
+	.detail h2{padding:7px 0 7px 10px;background-color:#43a9da;color:#fff;font-size:0.857em}
+	.detail h2 + a.delete{position:absolute;top:6px;right:9px;width:12px;height:16px;background:url("../../images/app/app_delete_ico.png") left top scroll no-repeat;background-size:12px auto}
+	.detail ul li{width:100%;padding:0 12px;box-sizing:border-box}
+	ul.tabMenu > li dl{overflow:hidden;width:100%;padding:10px 0;border-top:1px solid #ccc;font-size:0.929em}
+	ul.tabMenu > li:first-child li dl{overflow:hidden;width:68.7%;padding:10px 0;border-top:1px solid #ccc;font-size:0.929em}
+	ul.tabMenu > li:first-child li:first-child dl,
+	.detail ul li:first-child dl{border-top:none}
+	.detail ul li dl dt,
+	.detail ul li dl dd{float:left;color:#323232}
+	.detail ul li dl dt{width:100px;color:#6c6c6c}
+	a.abled,
+	a.disabled{position:absolute;display:block;top:39px;right:19px;width:17.4%;height:59.2%}
+	a.abled{background:url("../../images/app/door_abled_ico.png") left top scroll no-repeat;background-size:59px auto}
+	a.disabled{background:url("../../images/app/door_disabled_ico.png") left top scroll no-repeat;background-size:59px auto}
+
+.footer{position:absolute;bottom:0;width:100%;padding:16px 0;background-color:#e6e6e6;box-sizing:border-box}
+	.footer div{overflow:hidden;width:76%;margin:0 auto;text-align:center}
+	.footer p{float:left;width:30px;height:24px;margin-top:5px;background:url("../../images/app/grib_logo.png") left top scroll no-repeat;background-size:30px auto}
+	.footer ul{overflow:hidden;float:left;width:76.6%;margin-left:12px}
+		.footer ul li{float:left;font-size:0.714em;color:#575757}
+		.footer ul li::before{content:"|";margin:0 5px}
+		.footer ul li:first-child::before,
+		.footer ul li:last-child::before{content:"";margin:0}
+		.footer ul li:last-child{clear:both;margin-top:7px}

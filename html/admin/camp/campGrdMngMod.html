@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>캠핑장관리 | 캠핑장 정보 수정</title>
+<link rel="stylesheet" href="../../../css/admin/admin.css">
+<link rel="stylesheet" href="../../../css/admin/reset.css">
+<link rel="stylesheet" href="../../../css/admin/jquery-ui.css">
+<script src="../../../js/jquery-1.7.1.min.js"></script>
+<script src="../../../js/jquery-ui.js"></script>
+</head>
+<body class="body">
+	<div class="wrap">
+		<div class="headWrap">
+			<div id="header">
+				<a href="#"></a>
+				<div>
+					<div>admin1 님</div>
+					<a href="#" class="logout">로그아웃</a>
+				</div>
+			</div>
+		</div>
+
+		<ul id="side">
+			<li><span><img src="../../../images/admin/resv_mng_ico.png" alt="예약 관리 아이콘">예약 관리</span>
+				<dl>
+					<dd><a href="#">예약 목록</a></dd>
+					<dd><a href="#">예약 등록</a></dd>
+					<dd><a href="#">알림발송내역</a></dd>
+				</dl>
+			</li>
+			<li><span><img src="../../../images/admin/camp_mng_ico.png" alt="캠핑장 관리 아이콘">캠핑장 관리</span>
+				<dl>
+					<dd class="focus"><a href="#">캠핑장 정보</a></dd>
+					<dd><a href="#">캠핑장 관리</a></dd>
+				</dl>
+			</li>
+			<li><span><img src="../../../images/admin/user_mng_ico.png" alt="사용자 관리 아이콘">사용자 관리</span>
+				<dl>
+					<dd><a href="#">사용자 목록</a></dd>
+				</dl>
+			</li>
+		</ul>
+		
+		<!-- 메인 영역 S. -->
+		<div class="main">
+			<!-- 책갈피 영역 S. -->
+			<div>
+				<div>
+					<h1>캠핑장 관리</h1>
+					<h2><span>캠핑장 관리</span> &gt; 캠핑장 정보</h2>
+				</div>
+				<div>
+					<h3>캠핑장 정보</h3>
+				</div>
+			</div>
+			<!-- 책갈피 영역 E. -->
+			
+			<!-- 테이블 영역 S. -->
+			<table class="tb_manage">
+				<caption>캠핑장 정보 수정 테이블</caption>
+					<tr>
+						<th>캠핑장 명</th>
+						<td><label for=""><input type="text" id="" class="campName"></label></td>
+					</tr>
+					<tr>
+						<th>주소</th>
+						<td><label for=""><input type="text" id="" class="campLocation"></label></td>
+					</tr>
+					<tr>
+						<th>전화번호</th>
+						<td>
+							<label for=""><input type="text" id="" class="tel"></label>
+							<span>-</span>
+							<label for=""><input type="text" id="" class="tel"></label>
+							<span>-</span>
+							<label for=""><input type="text" id="" class="tel"></label>
+						</td>
+					</tr>
+					<tr>
+						<th>체크인 시간</th>
+						<td>
+							<select>
+								<option>9:00</option>
+								<option>10:00</option>
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<th>체크아웃 시간</th>
+						<td>
+							<select>
+								<option>16:00</option>
+								<option>17:00</option>
+							</select>
+						</td>
+					</tr>
+			</table>
+			<!-- 테이블 영역 E. -->
+			
+			<!-- 버튼 영역 S. -->
+			<div class="btn">
+				<div>
+					<a href="#" class="cancel"><span>취 소</span></a>
+					<a href="#" class="modify"><span>수 정</span></a>
+				</div>
+			</div>
+			<!-- 버튼 영역 E. -->
+		</div>
+		<!-- 메인 영역 E. -->
+	</div>
+</body>
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>상세예약정보 | 수정</title>
+<link rel="stylesheet" href="../../../css/admin/admin.css">
+<link rel="stylesheet" href="../../../css/admin/reset.css">
+<script src="../../../js/jquery-1.7.1.min.js"></script>
+<script src="../../../js/jquery-ui.js"></script>
+<script src="../../../js/admin/common.js"></script>
+</head>
+<body class="body">
+	<div class="wrap">
+		<div class="headWrap">
+			<div id="header">
+				<div></div>
+				<div>
+					<div>admin1 님</div>
+					<a href="#" class="logout"><span>로그아웃</span></a>
+				</div>
+			</div>
+		</div>
+
+		<ul class="side">
+			<li><span><img src="../../../images/admin/resv_mng_ico.png" alt="예약 관리 아이콘">예약 관리</span>
+				<dl>
+					<dd class="focus"><a href="#">예약 목록</a></dd>
+					<dd><a href="#">예약 등록</a></dd>
+					<dd><a href="#">알림발송내역</a></dd>
+				</dl>
+			</li>
+			<li><span><img src="../../../images/admin/camp_mng_ico.png" alt="캠핑장 관리 아이콘">캠핑장 관리</span>
+				<dl>
+					<dd><a href="#">캠핑장 정보</a></dd>
+					<dd><a href="#">캠핑장 관리</a></dd>
+				</dl>
+			</li>
+			<li><span><img src="../../../images/admin/user_mng_ico.png" alt="사용자 관리 아이콘">사용자 관리</span>
+				<dl>
+					<dd><a href="#">사용자 목록</a></dd>
+				</dl>
+			</li>
+		</ul>
+
+		<div class="main">
+			<div>
+				<div>
+					<h1>예약목록</h1>
+					<h2><span>예약관리</span> &gt; 예약목록 &gt; 상세 예약정보</h2>
+				</div>
+				<div>
+					<h3>상세 예약정보</h3>
+				</div>
+			</div>
+			<table class="mng_tb">
+				<caption>예약 상세 예약정보</caption>
+					<tr>
+						<th>이름</th>
+						<td><label for=""><input type="text" id="" class="username"></label></td>
+					</tr>
+					<tr>
+						<th>휴대폰 번호</th>
+						<td>
+							<label for=""><input type="text" class="tel"></label>
+							<span>-</span>
+							<label for=""><input type="text" class="tel"></label>
+							<span>-</span>
+							<label for=""><input type="text" class="tel"></label>
+						</td>
+					</tr>
+					<tr>
+						<th>캠핑장 명</th>
+						<td><label for=""><input type="text" id="" class="campName"></label></td>
+					</tr>
+					<tr>
+						<th>캠핑카 번호</th>
+						<td><label for=""><input type="text" id="" class="campNum"></label></td>
+					</tr>
+					<tr>
+						<th>사용자 예약일</th>
+						<td><input type="text" id="datepicker1" class="resvDate datepicker"><label for="datepicker1"></label></td>
+					</tr>
+					<tr>
+						<th>사용시작 날짜</th>
+						<td><input type="text" id="datepicker2" class="startDate datepicker"><label for="datepicker2"></label></td>
+					</tr>
+					<tr>
+						<th>사용시작 시간</th>
+						<td>
+							<select>
+								<option>09시</option>
+								<option>16시</option>
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<th>사용종료 날짜</th>
+						<td><input type="text" id="datepicker3" class="endDate datepicker"><label for="datepicker3"></label></td>
+					</tr>
+					<tr>
+						<th>사용종료 시간</th>
+						<td>
+							<select>
+								<option>09시</option>
+								<option>16시</option>
+							</select>
+						</td>
+					</tr>
+			</table>
+			<div class="btn">
+				<a href="#" class="sendSMS"><span>sms 알림 전송</span></a>
+				<div>
+					<a href="#" class="delete"><span>삭 제</span></a>
+					<a href="#" class="list"><span>목 록</span></a>
+				</div>
+			</div>
+		</div>
+		<div id="footer">
+			<div>
+				<p><img src="../../../images/admin/footer_grib_logo.png" alt="그립 로고"></p>
+				<div>
+					<address>서울특별시 서초구 효령로 242 서양빌딩 5층 (주)그립  대표전화 : 02)521-6542  기업고객 : 070-7011-2825 </address>
+					Copyright @ 2016 grib Inc. All rights reserved.
+				</div>
+				<ul>
+					<li><a href="#" class="btn_reqcont">제휴문의</a></li>
+					<li><a href="#" target="_blank">회사소개서</a></li>
+					<li><a href="#" target="_blank">제품소개서</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,339 @@
+@CHARSET "UTF-8";
+
+.body{background:url("../../images/admin/LNB_bg.png") left top scroll repeat-y}
+.wrap{overflow:hidden;width:100%;min-width:1280px}
+
+/*header*/
+div.headWrap{width:100%;background-color:#f0f3f6}
+	div#header{overflow:hidden;height:54px}
+	div#header > a:first-child{float:left;width:200px;height:54px;background:#004272 url("../../images/admin/g_platform_logo.png") center center scroll no-repeat}
+	div#header a + div{overflow:hidden;float:right;padding:8px 0;color:#3fa1e9}
+	div#header a + div > div{float:left;padding:6px 8px 0;font-size:18px}
+
+/*LNB*/
+#side{float:left;width:184px;min-height:565px;padding:8px;z-index:11}
+	#side li{margin-top:5px;border:1px solid #0677c7;background-color:#007bd1;color:#cadcf2;font-size:20px;font-weight:bold;text-align:center}
+	#side li a{color:#cadcf2}
+	#side li img{width:19px;height:19px;margin-top:-4px;margin-right:6px}
+	#side li span{display:block; padding: 16px 20px}
+	#side li:first-child{margin-top:0}
+	#side li dl{padding: 5px;border-top:1px solid #0677c7;background-color:#1d96f3;color:#cde2fb;text-align:center}
+	#side li dl dd{width:100%;font-size:16px}
+	#side li dl dd.focus{background-color:#157af0}
+	#side li dl dd.focus a{color:#fff}
+
+/*footer*/
+div#footer {display:none; position:absolute;bottom:0;float:left;width:100%;min-width:1280px;height:39px;padding:38px 0 28px;background:#3c3c3c url("../../images/admin/LNB_bg.png") left top scroll repeat-y}
+	#footer > div{overflow:hidden;padding:0 20px;margin-left:200px;background-color:#3c3c3c}
+	#footer > div p{float:left;padding-right:10px}
+	#footer > div div{float:left;font-size:12px;color:#a1a1a1}
+	#footer > div div address{width:100%;color:#dedede}
+	#footer > div ul{overflow:hidden;float:right}
+	#footer > div ul li{float:left}
+	#footer > div ul li a{padding:0 10px;border-left:1px solid #bababa;font-size:14px;color:#bababa;line-height:14px}
+	#footer > div ul li:first-child a{border-left:none}
+	#footer > div ul li:first-child a{margin-left:0;}
+	#footer > div ul li a:focus,
+	#footer > div ul li a:active,
+	#footer > div ul li a:hover{color:#bababa}
+
+/*main*/
+.main{overflow:hidden;position:relative;min-width:1020px;min-height:493px;padding:22px 30px 98px}
+	.main > div:first-child{overflow:hidden;border-bottom:1px solid #ccd6df;margin-bottom:10px}
+	.main h3.tableTitle{width:100%;padding-bottom:10px;margin:35px 0 10px;border-bottom:1px solid #ccd6df;font-size:18px}
+	.resvList > div:first-child{border-bottom:none}
+	.main > div:first-child div{overflow:hidden;height:26px}
+	.main > div:first-child div + div{margin:31px 0 8px}
+	.main > div:first-child h1{float:left;width:140px;font-size:22px}
+	.main > div:first-child h1,
+	.main > div:first-child h2,
+	.main > div:first-child h2{color:#404850}
+	.main > div:first-child h2{float:right;margin:5px 0 20px;font-size:16px;font-weight:normal}
+	.main > div h2 span,
+	.main > div h3,
+	.main h3.tableTitle{color:#8b8b8b}
+	.main > div h3{float:left;width:50%;font-size:18px}
+	.main > div:first-child h4{float:right;margin-top:7px;font-size:12px;font-weight:normal}
+	.main > div:first-child h4 span{color:#f00}
+	//.main table + div{margin-top:36px}
+	.main table + div div{overflow:hidden;margin-bottom:10px}
+	.main select{height:31px;font-size:16px}
+	.error_page{position:absolute;width:804px;height:214px;top:50%;left:50%;margin:-107px 0 0 -402px}
+	.error_page > p{float:left;width:212px;height:215px;margin-right:82px}
+	.error_page div p:first-child{margin-bottom:43px;color:#3fa1e9;font-size:22px;font-weight:700}
+	.error_page div p + p{font-size:16px;line-height:32px}
+	.error_page div p + p,
+	.error_page div p span{font-weight:bold}
+	.error_page div p strong{color:#b33700}
+	
+/*Button*/
+	a{height:36px;border-radius:2px;line-height:36px}
+	.btn{overflow:hidden;position:relative;padding-top:25px;width:100%}
+	.btn a{border:1px solid #ccd6df;color:#1d96f3;text-align:center;font-size:18px;font-weight:700}
+	.btn a:focus{background-color:#f2f2f2}
+	.login .btn a:focus{background-color:transparent}
+	.main .btn div{float:right}
+	.btn div a:first-child{margin-left:0}
+	.btn div a{float:left;width:98px;margin-left:14px}
+		div.pop div.btn div{overflow:hidden;width:214px;margin:0 auto}
+		div.pop div.btn div a.confirm{margin:0 65px}
+	a.btn_close{position:absolute;top:19px;right:18px;width:16px;height:16px;background:url("../../images/admin/btn_close.png") left top scroll no-repeat}
+	a.btnPop:hover, a.btnPop:focus{text-decoration:underline}
+	a.page_prev{display:block;width:250px;height:68px;background:url("../../images/admin/prev_page_ico.png") left top scroll no-repeat;margin:110px auto}
+	a.logout{float:left;width:98px;margin-right:30px;border:1px solid #ccd6df;color:#1d96f3;font-size:18px;font-weight:700;text-align:center}
+	a.search{float:right;width:99px;height:87px;margin-left:7px;border:1px solid #ccd6df;color:#1d96f3;font-size:18px;font-weight:700;line-height:79px;text-align:center}
+
+	/*검색 조건이 세줄일 경우 a버튼*/
+	a.search_exp{height:131px;line-height:131px}
+
+	a.select_delete, a.enroll{position:absolute;right:0;width:98px}
+	a.cancel + a.enroll{position:relative}
+	
+	/*캠핑카 관리 - 기기제어 버튼*/
+	a.devIcon{display:block;width:55px;height:17px;margin:0 auto;background:url("./../../images/admin/accordion_up.png") right center scroll no-repeat;line-height:17px;}
+	.tableTitle + ul li .btn{padding:0;margin:0;margin-bottom:10px}
+	.btn a.tableSub, .btn .tableAdd{float:right;width:47px;height:14px;padding:9px;margin-top:10px;text-align:center;color:#fff;font-size:16px;line-height:14px}
+	.btn a.tableSub{background-color:#f5003a}
+	.btn a.tableSub:focus{background-color:#d90033}
+	.btn .tableSub span{float:left;width:14px;height:14px;background:url("./../../images/admin/device_sub.png") center center scroll no-repeat}
+	.btn a.tableAdd{background-color:#0080cc}
+	.btn a.tableAdd:focus{background-color:#0064a0}
+	.btn .tableAdd span{float:left;width:14px;height:14px;background:url("./../../images/admin/device_plus.png") center center scroll no-repeat}
+	
+	
+	/*팝업 내 sendSMS*/
+	a.sendSMS{display:block;width:138px;margin:0 auto 30px}
+		.pop .tb_sms td span > a{display:block;line-height:32px}
+
+/*table*/
+.tableWrap{float:left;width:100%;min-height:330px;padding:16px 0 0}
+
+.main table{width:100%;height:39px;border:1px solid #dbdbdb;border-spacing:0;text-align:center;font-size:16px}
+	table td a{line-height:16px}
+	table th{padding:7px 0;border-left:1px solid #dbdbdb;background-color:#c4c4c4}
+	table tr:first-child th,
+	table tr:first-child td{border-top:none}
+	table thead th:first-child{border-left:none}
+	table tbody th{width:146px;padding-left:21px;border-top:1px solid #dbdbdb;border-left:none;text-align:left}
+	table tbody th span{margin-left:6px;color:#f00}
+	table tbody td{padding:4px;border-top:1px solid #dbdbdb;border-left:1px solid #dbdbdb}
+	table tbody td.txt_align{padding-left:10px;text-align:left}
+	table tbody td.blank{height:19px;border-top:none;border-bottom:none}
+	table tbody td:first-child{border-left:none}
+	table tbody td.campCarNum{width:20%}
+	table.noresult{border:none}
+	tr.even{background-color:#f0f0f0}
+	
+	/*manage table*/
+	.tb_manage{overflow:hidden;text-align:left}
+	.tb_manage tbody td{overflow:hidden;text-align:left}
+	 td input[type="text"].datepicker{text-align:center}
+	.tb_manage td input[type="text"].datepicker + label{float:left;width:26px;height:38px;margin-left:5px;background:url("../../images/admin/date_select_ico.png") left center scroll no-repeat;font-size:0;line-height:0;text-indent:-9999px}
+	.tb_manage tbody td > label{display:block;padding:0 3px;border:1px solid #d7d7d7}
+	.tb_manage tbody td > label input[type="text"],
+	.tb_manage tbody td > label input[type="password"],
+	.tb_manage tbody td > label input[type="email"]{float:none; width:100% !important; padding:0; border:none;}
+	.tb_manage td.selectBoxCampList{width:210px;height:295px}
+	.tb_manage td.selectBoxCamp{height:295px;border-left:none}
+	.tb_manage td.selectBoxDir{width:30px;padding:0 12px;border-left:none}
+	.tb_manage td.selectBoxDir a{display:block;width:28px;height:28px;border:1px solid #ccd6df}
+	.tb_manage td.selectBoxDir a.addList{background:url("../../images/admin/camp_add.png") center center scroll no-repeat}
+	.tb_manage td.selectBoxDir a.removeList{margin-top:10px;background:url("../../images/admin/camp_remove.png") center center scroll no-repeat}
+	.tb_manage td select.adminGradeCd{width:100%}
+	.tb_manage tbody td select + span,
+	table tbody td span.dash{float:left;margin:7px 5px}
+	.tb_manage tbody td select{width:100%}
+	
+	/*Reservation Enrollment datepicker*/
+	.tb_manage td input[type="text"].datepicker + label{margin-top:3px;height:28px;border:none;cursor:pointer}
+	
+	.tb_device tbody td select.deviceType{width:100%;border:1px solid #f00}
+		
+	/*search value*/
+	.sortValue table{border:none}
+	.sortValue table tbody th{width:80px;padding:0 21px;background-color:transparent;border-top:1px solid #ccd6df;letter-spacing:-1px}
+	.sortValue table tbody tr:first-child th{border-top:none}
+	.sortValue table td{position:relative;border:none;border-top:1px solid #ccd6df}
+	.sortValue table td select{width:100%;height:35px}
+	.sortValue td.dateSelect{position:relative;width:25%}
+	.sortValue td.dateSelect input{position:relative;width:100%;height:38px;line-height:38px;vertical-align:middle;padding:0;border:none;background-color:transparent;z-index:10;cursor:pointer}
+	.sortValue td.dateSelect input:focus +label > span{display:none}
+	.sortValue td.dateSelect label{float:left;position:absolute;top:5px;left:0;right:40px;height:35px;border:1px solid #d7d7d7;background-image:none}
+	.sortValue td.dateSelect label span{line-height:38px}
+	.sortValue td.dateSelect label + span{position:absolute;top:9px;right:8px;width:26px;height:28px;background:url("../../images/admin/date_select_ico.png") right center scroll no-repeat;z-index:9}
+	.sortValue td input[type="text"].searchKeyword{width:99%}
+	
+	.resvList div label input[type="radio"]{margin-right:5px;vertical-align:middle}
+	
+	/*device controller*/
+	.devControl{height:30px;background:url("./../../images/admin/down1.jpg") left top scroll no-repeat}
+	.devControl td{position:relative;padding:11px 10px 10px;background:url("./../../images/admin/down4.jpg") right bottom scroll no-repeat}
+	.devControl td:before{content:'';position:absolute;bottom:0;left:0;width:1000px;min-height:37px;background:url("./../../images/admin/down3.jpg") left top scroll no-repeat}
+	.devControl td:after{content:'';position:absolute;right:0;top:0;width:100%;height:100%;background:url("./../../images/admin/down2.jpg") right top scroll no-repeat}
+	
+	.devControl td p,
+	.devControl td ul{overflow:hidden;position:relative;z-index:10}
+	.devControl td p{width:100%;text-align:center}
+	.devControl td ul li{overflow:hidden;float:left;padding:0 12px;border-left:1px solid #ccc;text-align:center;vertical-align:middle}
+	.devControl td ul li:first-child{border-left:none}
+	.devControl td ul li > span{float:left;padding:2px 5px 0 0}
+	.devControl .box,
+	.devControl .doorLock{position:relative;float:left;width:53px;height:16px;padding:3px 0;border:1px solid #e5e5e5;border-radius:1em}
+	.devControl .doorLock{width:68px}
+	.devControl li > a .toggle_btn{position:relative;display:block;width:16px;height:16px;margin:0 3px;border-radius:1em;background-color:#898f95}
+	.devControl td ul li.active .toggle_btn{float:right;background-color:#1b73ca}
+	.devControl td ul li.active a:before,
+	.devControl td ul li > a:after{position:absolute;font-size:14px}
+	.devControl td ul li.active .box:before{content:'ON';left:3px}
+	.devControl td ul li.active .doorLock:before{content:'OPEN';left:3px}
+	.devControl td ul li .doorLock:after{top:3px;content:'CLOSE';right:5px}
+	.devControl td ul li.active .box:after,
+	.devControl td ul li.active .doorLock:after{display:none}
+	.devControl td ul li .box:after{content:'OFF';position:absolute;top:3px;right:5px;color:#404850}
+	.devControl td ul li.error > span{color:#f00}
+	.devControl td ul li.error .box{background-color:#f00}
+	.devControl td ul li.error .box:after{content:'';display:none}
+	.devControl td ul li.error .box:before{content:'Error!';color:#fff;margin-left:4px}
+	.devControl td ul li.error .box .toggle_btn{display:none} 
+		
+	/*information table*/
+	.info td{padding-left:21px}
+	
+	/*table in popup*/
+	.pop table.tb_sms,
+	.pop table.tb_proposal{width:100%;border-top:1px solid #ccd6df;border-bottom:1px solid #ccd6df;font-size:16px;border-spacing:0}
+	.pop table.tb_sms th{width:127px;background-color:#f6f6f6;text-align:left}
+	.pop table.tb_sms th,
+	.pop table.tb_send td{padding:3px 0 3px 19px;line-height:32px}
+	.pop table.tb_send span.smsMsg{display:block;min-height:192px}
+	.pop table.tb_sms td span strong{float:left;font-weight:normal}
+	.pop table.tb_proposal th{border-top:none;background-color:#f6f6f6;font-size:13px}
+	.pop table.tb_proposal td{border-left:none;border-top:none}
+	.pop table.tb_proposal th.no_bgcolor{background-color:transparent}
+		.tb_proposal{margin-top:20px;font-size:13px}
+		.tb_proposal th{width:72px;padding-left:10px}
+	
+/*pagination*/
+.pagination {float: right;position: relative;left:-50%;padding-bottom:30px}
+	.pagination li{float: left; position: relative; left: 50%}
+	.pagination li a{display:block;width:36px;border-left:none;border-radius:0;text-align:center;color:#96a5b2;font-weight:normal}
+	.pagination li a:focus{background-color:#fff}
+	.pagination li:first-child a{border-left:1px solid #ccd6df}
+	.pagination li a.page{padding-left:4px;font-weight: bold;color: #1d96f3}
+	.pagination li.dir a{background: transparent url("../../images/admin/page_next_ico.png") center center scroll no-repeat}
+
+/*Admin Login*/
+.login{position:absolute;overflow:hidden;width:502px;top:50%;left:50%;margin:-154px 0 0 -251px}
+	.login div:first-child{height:72px;margin:0 auto;background:url("../../images/admin/[g_platform]login_logo.png") left top scroll no-repeat}
+	.login div + div{position:relative;overflow:hidden;width:100%;padding:27px 0 20px}
+	.login div label + a.log{position:absolute;right:0;width:110px;height:110px;background-color:#1d96f3}
+	.login div label + a > span{display:block;height:110px;background:url("../../images/admin/login_btn.png") center center scroll no-repeat}
+	.login div.btn{overflow:hidden;padding-top:23px;border-top:1px solid #ccc6df;text-align:center}
+	.login div.btn > a{border:none}
+	.login div.btn > a, 
+	.login div.btn > span{color:#999}
+	.login div + label{overflow:hidden;float:left;margin-bottom:20px;font-size:16px;color:#999}
+	.login label input[type="checkbox"]{float:left;margin:3px 6px 0 0}
+
+/*Sort value*/
+.sortValue{position:absolute;left:30px;right:140px;overflow:hidden;min-width:914px;border-top:1px solid #ccd6df;border-bottom:1px solid #ccd6df}
+	.sortValue > div{overflow:hidden; float:left;width:100%;padding:4px 0;color:#000;font-size:16px}
+	.sortValue > div > *{float:left}
+	.sortValue td:first-child select{width:370px}
+	.sortValue td:first-child select + span + select{width:412px}
+	.userSort td:first-child select{width:789px}
+	.sortValue div span{padding-top:10px}
+	.sortValue + a + div.dataSort{clear:both;float:right;padding:16px 0}
+
+/*datepicker*/
+.ui-datepicker{display:none; overflow:hidden;min-width:176px;background-color:#fff; border:1px solid #ccd6df;}
+	a.ui-datepicker-prev{float:left;height:15px;background:url("../../images/admin/resv/datepicker_prev.png") center center scroll no-repeat;cursor:pointer; padding:0 20px}
+	a.ui-datepicker-next{float:right;height:15px;background:url("../../images/admin/resv/datepicker_next.png") center center scroll no-repeat;cursor:pointer; padding:0 20px}
+	.ui-datepicker-title{width:90px;margin:0 auto;margin-top:15px;text-align:center;font-size:16px}
+	.ui-datepicker-calendar{width:100%;padding-top:12px;border-spacing:0;font-size:11px}
+	.ui-datepicker-calendar tr:first-child th{height:28px;border:none;border-top:1px solid #ccd6df;border-bottom:1px solid #ccd6df;background-color:#f4f4f4}
+	.ui-datepicker-calendar tbody a{display:block;text-align:center;line-height:36px}
+	.ui-datepicker-calendar tbody tr td{padding:0;border:none}
+	.ui-icon-circle-triangle-e,
+	.ui-icon-circle-triangle-w{font-size:0;line-height:0}
+	.ui-datepicker-unselectable, .ui-state-disabled{width:31px;height:36px;color:#bfbfbf;text-align:center}
+	.ui-datepicker-calendar > tbody tr td:first-child a{color:#f00}
+	.ui-priority-secondary, .ui-datepicker-other-month,
+	.ui-datepicker-calendar > tbody tr:first-child td:first-child a{color:#bfbfbf} 
+	.ui-datepicker-calendar tbody tr td a.ui-state-active{background-color:#59a4d8;color:#fff}
+
+/*input*/
+	.login div + div input[type="text"],
+	.login div + div input[type="password"]{float:left;width:338px;height:38px;padding:5px 20px;color:#ccc}
+	.login div + div input[type="password"]{clear:both;margin-top:10px}
+	.main input[type="text"],
+	.main input[type="number"],
+	.main input[type="password"],
+	.main input[type="tel"],
+	.main input[type="email"]{height:32px;font-size:16px}
+	.main td input[type="password"],
+	.main td input[type="tel"],
+	.main input[type="email"],
+	td span.dash{float:left}
+	.main select.numSelect{width:60px}
+	.main input[type="tel"]{width:51px;text-align:center}
+	.main input[type="text"].resvDate,
+	.main input[type="text"].startDate,
+	.main input[type="text"].endDate{width:170px;cursor:pointer}
+	.main input[type="text"].username,
+	.main input[type="text"].userid,
+	.main td input[type="password"],
+	.main input[type="email"]{width:202px}
+	.main input[type="text"]{float:left}
+	.main input[type="text"].tel{width:51px;text-align:center}
+		.user input{width:834px}
+		.user input[type="text"].username{width:834px}
+	.pop input[type="text"],
+	.pop select.numSelect,
+	.pop input[type="tel"]{float:left;font-size:16px}
+	.pop input[type="text"]{width:280px;height:29px}
+	.pop select.numSelect{width:80px;height:31px}
+	.pop input[type="tel"]{width:78px;height:29px;text-align:center}
+	.pop table.tb_sms tbody td textarea{width:282px;font-size:16px;line-height:32px;vertical-align:middle}
+	.pop table.tb_proposal td input[type="text"],
+	.pop table.tb_proposal td input[type="email"],
+	.pop table.tb_proposal td textarea{width:200px;vertical-align:middle}
+	.pop table.tb_proposal td input[type="text"].intxt_subject{width:508px}
+	.pop table.tb_proposal td textarea{width:508px;height:160px}
+	.pop table.tb_proposal td input[type="text"],
+	.pop table.tb_proposal td input[type="email"]{height:29px}
+
+/*popup*/
+.dimmed{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:url("../../images/admin/bg_bpop.png") left top scroll repeat;z-index:10}
+.pop{display:none;position:fixed;width:498px;top:50%;left:50%;margin:-275px 0 0 -249px;background-color:#fff;font-size:16px;z-index:11}
+.send{margin-top:-226px}
+.pop h1{padding:13px 0;background-color:#1d96f3;font-size:20px;text-align:center;color:#fff}
+.pop > div{padding:25px 20px}
+.edit .txt{width:100%;margin-top:20px;text-align:center}
+.proposal{width:634px;/*height:522px*/}
+.proposal .txt{color:#787777;text-align:left}
+.loginPop{width:372px;margin-left:-186px}
+.pop .tab{position:relative;padding:24px 20px 30px}
+.pop .tab li h2{position:absolute;top:24px;left:166px;width:50%}
+.pop .tab li:first-child h2{left:20px}
+.pop .tab li.focus h2 a{border-bottom:3px solid #1d96f3}
+.pop .tab li h2 a{display:block;width:166px;font-size:16px;text-align:center}
+.pop .tab li div{padding-top:77px}
+.pop .tab li > div{display:none}
+.pop .tab li.focus div.inputDiv{display:block}
+.pop .tab li div > p{text-align:center;font-size:14px;line-height:22px}
+.pop .tab .tb_proposal th{width:81px}
+.pop .tab .tb_proposal td{padding:0 12px 12px}
+.pop .tab .tb_proposal tr:first-child td{padding-top:12px}
+.pop .tab .tb_proposal td input[type="text"],
+.pop .tab .tb_proposal td input[type="email"]{width:218px}
+.pop .tab .tb_proposal .p_tel{width:58px}
+.pop .tab .tb_proposal .p_tel + .dash{margin:7px 4px}
+.pop .tab .f_confirm{display:block;width:78px;height:30px;margin:30px auto 0;border:1px solid #ccd6df;color:#3fa1e9;font-size:14px;text-align:center;line-height:30px}
+.pop .tab .findResult p{padding-bottom:38px;text-align:center}
+.pop .tab .findResult p + p{padding:58px 0;border-top:1px solid #ccd6df;border-bottom:1px solid #ccd6df}
+.pop .tab .findResult .btn{padding:30px 61px 0;margin:0 auto}
+.pop .tab .findResult .btn a{float:left;width:98px;margin-left:14px;font-weight:normal;font-size:14px}
+.pop .tab .findResult .btn a:first-child{margin-left:0}
+
+

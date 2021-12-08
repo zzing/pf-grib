@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>사용자관리 | 사용자등록</title>
+<link rel="stylesheet" href="../../../css/admin/admin.css">
+<link rel="stylesheet" href="../../../css/admin/reset.css">
+<script src="../../../js/jquery-1.7.1.min.js"></script>
+<script src="../../../js/jquery-ui.js"></script>
+<script src="../../../js/common.js"></script>
+</head>
+<body class="body">
+	<div class="wrap">
+		<div class="headWrap">
+			<div id="header">
+				<a href="#"></a>
+				<div>
+					<div>admin1 님</div>
+					<a href="#" class="logout"></a>
+				</div>
+			</div>
+		</div>
+
+		<ul id="side">
+			<li><span><img src="../../../images/admin/resv_mng_ico.png" alt="예약 관리 아이콘">예약 관리</span>
+				<dl>
+					<dd><a href="#">예약 목록</a></dd>
+					<dd><a href="#">예약 등록</a></dd>
+					<dd><a href="#">알림발송내역</a></dd>
+				</dl>
+			</li>
+			<li><span><img src="../../../images/admin/camp_mng_ico.png" alt="캠핑장 관리 아이콘">캠핑장 관리</span>
+				<dl>
+					<dd><a href="#">캠핑장 정보</a></dd>
+					<dd><a href="#">캠핑장 관리</a></dd>
+				</dl>
+			</li>
+			<li><span><img src="../../../images/admin/user_mng_ico.png" alt="사용자 관리 아이콘">사용자 관리</span>
+				<dl>
+					<dd class="focus"><a href="#">사용자 목록</a></dd>
+				</dl>
+			</li>
+		</ul>
+
+		<div class="main">
+			<div>
+				<div>
+					<h1>사용자 관리</h1>
+					<h2><span>사용자 관리</span> &gt; 사용자 목록 &gt; 사용자 등록</h2>
+				</div>
+				<div>
+					<h3>사용자 등록</h3>
+					<h4><span>*</span> 필수입력 사항</h4>
+				</div>
+			</div>
+			<table class="mng_tb user">
+				<caption>사용자 등록 테이블</caption>
+					<tr>
+						<th>이름<span>*</span></th>
+						<td><label for=""><input type="text" id="" class="username"></label></td>
+					</tr>
+					<tr>
+						<th>관리자 ID<span>*</span></th>
+						<td><label for=""><input type="text" id="" class="userid"></label></td>
+					</tr>
+					<tr>
+						<th>비밀번호<span>*</span></th>
+						<td><label for=""><input type="password" id="" class="pwd"></label></td>
+					</tr>
+					<tr>
+						<th>비밀번호 확인<span>*</span></th>
+						<td><label for=""><input type="password" id="" class="pwd"></label></td>
+					</tr>
+					<tr>
+						<th>휴대폰 번호<span>*</span></th>
+						<td>
+							<label for=""><input type="text" id="" class="tel"></label>
+							<span>-</span>
+							<label for=""><input type="text" id="" class="tel"></label>
+							<span>-</span>
+							<label for=""><input type="text" id="" class="tel"></label>
+						</td>
+					</tr>
+					<tr>
+						<th>E-mail</th>
+						<td><label for=""><input type="text" id=""></label></td>
+					</tr>
+			</table>
+			<div class="btn">
+				<div>
+					<a href="#" class="cancel"></a>
+					<a href="#" class="enroll"></a>
+				</div>
+			</div>
+		</div>
+		<div id="footer">
+			<div>
+				<p><img src="../../../images/admin/footer_grib_logo.png" alt="그립 로고"></p>
+				<div>
+					<address>서울특별시 서초구 효령로 242 서양빌딩 5층 (주)그립  대표전화 : 02)521-6542  기업고객 : 070-7011-2825 </address>
+					Copyright @ 2016 grib Inc. All rights reserved.
+				</div>
+				<ul>
+					<li><a href="#" class="btn_reqcont">제휴문의</a></li>
+					<li><a href="#" target="_blank">회사소개서</a></li>
+					<li><a href="#" target="_blank">제품소개서</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

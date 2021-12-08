@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>예약관리 | 알림발송내역</title>
+<link rel="stylesheet" href="../../../css/admin/admin.css">
+<link rel="stylesheet" href="../../../css/admin/reset.css">
+<script src="../../../js/jquery-1.7.1.min.js"></script>
+<script src="../../../js/jquery-ui.js"></script>
+<script src="../../../js/admin/common.js"></script>
+</head>
+<body class="body">
+	<div class="wrap">
+		<div class="headWrap">
+			<div id="header">
+				<a href="#"></a>
+				<div>
+					<div>admin1 님</div>
+					<a href="#" class="logout">로그아웃</a>
+				</div>
+			</div>
+		</div>
+
+		<ul id="side">
+			<li><span><img src="../../../images/admin/resv_mng_ico.png" alt="예약 관리 아이콘">예약 관리</span>
+				<dl>
+					<dd><a href="#">예약 목록</a></dd>
+					<dd><a href="#">예약 등록</a></dd>
+					<dd class="focus"><a href="#">알림발송내역</a></dd>
+				</dl>
+			</li>
+			<li><span><img src="../../../images/admin/camp_mng_ico.png" alt="캠핑장 관리 아이콘">캠핑장 관리</span>
+				<dl>
+					<dd><a href="#">캠핑장 정보</a></dd>
+					<dd><a href="#">캠핑장 관리</a></dd>
+				</dl>
+			</li>
+			<li><span><img src="../../../images/admin/user_mng_ico.png" alt="사용자 관리 아이콘">사용자 관리</span>
+				<dl>
+					<dd><a href="#">사용자 목록</a></dd>
+				</dl>
+			</li>
+		</ul>
+		
+		<!-- 메인 영역 S. -->
+		<div class="main resvList">
+			<div>
+				<div>
+					<h1>알림발송내역</h1>
+					<h2><span>예약관리</span> &gt; 알림발송내역</h2>
+				</div>
+			</div>
+			<!-- 테이블 영역 S. -->
+			<div class="tableWrap">
+				<table>
+					<caption>알림발송 내역 리스트</caption>
+					<colgroup>
+							<col width="5%">
+							<col width="6%">
+							<col width="10%">
+							<col width="20%">
+							<col width="33%">
+							<col width="13%">
+							<col width="13%">
+						</colgroup>
+					<thead>
+						<tr>
+							<th>선택</th>
+							<th>번호</th>
+							<th>이름</th>
+							<th>휴대폰 번호</th>
+							<th>발송시간</th>
+							<th>알림내용</th>
+							<th>삭제</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td><input type="checkbox"></td>
+							<td>3</td>
+							<td>홍길동</td>
+							<td>010-1111-1111</td>
+							<td>2016-05-03 18:32</td>
+							<td><a href="#" class="btnPop">확인하기</a></td>
+							<td><a href="#"><img src="../../../images/admin/del_ico.png" alt="삭제아이콘"></a></td>
+						</tr>
+						<tr class="even">
+							<td><input type="checkbox"></td>
+							<td>2</td>
+							<td>홍길동</td>
+							<td>010-1111-1111</td>
+							<td>2016-05-03 18:32</td>
+							<td><a href="#" class="btnPop">확인하기</a></td>
+							<td><a href="#"><img src="../../../images/admin/del_ico.png" alt="삭제아이콘"></a></td>
+						</tr>
+						<tr>
+							<td><input type="checkbox"></td>
+							<td>1</td>
+							<td>홍길동</td>
+							<td>010-1111-1111</td>
+							<td>2016-05-03 18:32</td>
+							<td><a href="#" class="btnPop">확인하기</a></td>
+							<td><a href="#"><img src="../../../images/admin/del_ico.png" alt="삭제아이콘"></a></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<!-- 테이블 영역 E. -->
+			
+			<!-- 페이징 영역 S. -->
+			<div class="btn">
+				<ul class="pagination">
+					<li><a href="#"></a></li>
+					<li><a class="page" href="#">1</a></li>
+					<li><a href="#">2</a></li>
+					<li><a href="#">3</a></li>
+					<li class="dir"><a href="#"></a></li>
+				</ul>
+				<a href="#" class="select_delete"><span>선택 삭제</span></a>
+			</div>
+			<!-- 페이징 영역 E. -->
+		</div>
+		<!-- 메인 영역 E. -->
+		<div id="footer">
+			<div>
+				<p><img src="../../../images/admin/footer_grib_logo.png" alt="그립 로고"></p>
+				<div>
+					<address>서울특별시 서초구 효령로 242 서양빌딩 5층 (주)그립  대표전화 : 02)521-6542  기업고객 : 070-7011-2825 </address>
+					Copyright @ 2016 grib Inc. All rights reserved.
+				</div>
+				<ul>
+					<li><a href="#" class="btn_reqcont">제휴문의</a></li>
+					<li><a href="#" target="_blank">회사소개서</a></li>
+					<li><a href="#" target="_blank">제품소개서</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
