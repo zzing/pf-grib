@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+	<meta name="apple-mobile-web-app-capable" content="yes"/>
+<!--
+	<link rel="shortcut icon" href="icon.png">
+	<link rel="apple-touch-icon" href="iphone_icon.png.png">
+	<link rel="apple-touch-startup-image" href="startup.png" />
+-->
+	<link rel="stylesheet" href="./../../resources/api/css/reset.css">
+	<link rel="stylesheet" href="./../../resources/api/css/common.css">
+	<link rel="stylesheet" href="./../../resources/api/css/jquery-ui.css">	
+	<link rel="stylesheet" href="./../../resources/api/css/jquery-ui.custom.css">	
+	<script src="./../../resources/api/js/jquery-1.12.4.min.js"></script>
+	<script src="./../../resources/api/js/jquery-ui.min.js"></script>
+	
+	<script>
+		$(document).ready(function(){
+			$(".fixBottomNavi a").on({
+				click:function(e){
+					e.preventDefault();
+					if($(this).hasClass("active")){
+						$(this).removeClass("active");
+					}else{
+						$(this).addClass("active").siblings().removeClass("active");
+					}
+				}
+			});
+			
+			$(".radioBtnStyle0 a").on({
+				click:function(e){
+					e.preventDefault();
+					if($(this).hasClass("active")){						
+					}else{
+						$(this).parent().addClass("active").siblings().removeClass("active");												
+					}
+					
+				}				
+			});
+		});
+	</script>
+	
+<!--[if lt IE 9]>
+	 <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+<![endif]-->
+	<title>CO-04-0 (컨텐츠 > 카테고리_선택_필터)</title>
+</head>
+<body>
+	<header class="btnArea">
+		<h1>카테고리</h1>		
+		<a href="#none" class="sprite btnClose">Close</a>
+	</header>	
+	<article class="subContentsPBN topBorderN">
+		<section class="designFormBox0 designFormBox0BorderN">			
+			<h1 class="title">피부타입</h1>
+			<ul class="radioBtnStyle0">
+				<li class="active"><a href="#none">지성</a></li>
+				<li><a href="#none">건성</a></li>
+				<li><a href="#none">민감성</a></li>
+				<li><a href="#none">기타</a></li>						
+			</ul>		
+		</section>
+		<section class="designFormBox0">
+			<h1 class="title">스킨케어</h1>			
+			<ul class="radioBtnStyle0">
+				<li class="active"><a href="#none">트러블별</a></li>
+				<li><a href="#none">부위</a></li>
+				<li><a href="#none">성별/연령</a></li>
+				<li><a href="#none">기타</a></li>
+			</ul>			
+		</section>
+		<section class="designFormBox0">
+			<h1 class="title">계절</h1>			
+			<ul class="radioBtnStyle0">
+				<li class="active"><a href="#none">봄/가을</a></li>
+				<li><a href="#none">여름</a></li>
+				<li><a href="#none">겨울</a></li>
+				<li><a href="#none">환절기</a></li>
+			</ul>			
+		</section>
+		<section class="designFormBox0">
+			<h1 class="title">제품</h1>			
+			<ul class="radioBtnStyle0">
+				<li class="active"><a href="#none">기초제품</a></li>
+				<li><a href="#none">메이크업</a></li>
+				<li><a href="#none">기능별</a></li>
+				<li><a href="#none">기타</a></li>
+			</ul>			
+		</section>
+		<section class="designFormBox0 designFormBox0BottomB">
+			<h1 class="title">생활</h1>			
+			<ul class="radioBtnStyle0">
+				<li class="active"><a href="#none">생활습관</a></li>
+				<li><a href="#none">식습관</a></li>
+				<li><a href="#none">주변환경</a></li>
+				<li><a href="#none">기타</a></li>
+			</ul>			
+		</section>	
+		<div class="btnWrap">
+			<a href="#none" class="btnStyle1">필터 적용</a>
+		</div>
+	</article>	
+</body>
+</html>

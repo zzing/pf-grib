@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+	<meta name="apple-mobile-web-app-capable" content="yes"/>
+	<link rel="stylesheet" href="./../../resources/api/css/reset.css">
+	<link rel="stylesheet" href="./../../resources/api/css/common.css">
+<!--[if lt IE 9]>
+	 <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+<![endif]-->
+	<title>CO-04 컨텐츠_스킨케어FAQ</title>
+	<script src="./../../resources/api/js/jquery-1.12.4.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			var _selectLink = $(".selectLink1");
+			var _btnStyle1 = $(".btnStyle1");
+			var _textarea = $("textarea");
+			$(".popupWrap").on({
+				touchmove:function(e){
+					e.preventDefault();				
+				},
+				click:function(e){
+					e.preventDefault();
+					var _currentTagName = e.target.tagName;
+					if(e.target.tagName == "A"){						
+						$(".popupWrap").fadeOut(function(){
+							$(".popLayout0").fadeOut();
+							_selectLink.text($(e.target).text());
+						});
+						
+					}
+				}
+			});
+			
+			$(".contactCategorySelect").on({
+				click:function(e){
+					e.preventDefault();
+					$(".pop0").show();
+					$(".popupWrap").fadeIn();
+				}
+			});
+			
+			$(this).on({
+				keyup:function(){					
+					if(_selectLink.attr("data-title") != _selectLink.text() && _textarea.val() != ""){
+						_btnStyle1.removeClass("btnDimmed");
+					}else{
+						_btnStyle1.addClass("btnDimmed");
+					}					
+				}
+			});
+		});
+	</script>
+</head>
+<body>	
+	<header class="btnArea">
+		<a href="./CO-00.html" class="sprite btnBack">뒤로</a>		
+		<h1>스킨케어 FAQ</h1>
+	</header>	
+	<!-- 컨텐츠 작성 -->
+	<article class="subContents">
+		<section class="designTopBox fixedTitle topTabTitleBN">
+			<a href="./CO-04-0.html" class="selectLink1 w100p skinCareSelect" data-title="피부타입&gt;지성">피부타입&gt;지성</a>
+		</section>
+		<section class="topBorderN">
+			<ul class="listStyle0">
+				<li class="contentsFAQ">
+					<a href="#none">
+						<span>지성</span>
+						<span>변비가 생기면 얼굴에 뾰루지가 생긴다?</span>
+					</a>
+				</li>
+				<li class="contentsFAQ">
+					<a href="#none">
+						<span>지성</span>
+						<span>화장을 해도 가려지지 않는 블랙헤드 관리할 수 있는 방법도 알려주세요.</span>
+					</a>
+				</li>
+				<li class="contentsFAQ">
+					<a href="#none">
+						<span>지성</span>
+						<span>오일이 모공을 막아 여드름을 유발하나요?</span>
+					</a>
+				</li>
+				<li class="contentsFAQ">
+					<a href="#none">
+						<span>지성</span>
+						<span>오일이 모공을 막아 여드름을 유발하나요?</span>
+					</a>
+				</li>	
+				<li class="contentsFAQ">
+					<a href="#none">
+						<span>지성</span>
+						<span>오일이 모공을 막아 여드름을 유발하나요?</span>
+					</a>
+				</li>	
+				<li class="contentsFAQ">
+					<a href="#none">
+						<span>지성</span>
+						<span>오일이 모공을 막아 여드름을 유발하나요?</span>
+					</a>
+				</li>
+				<li class="contentsFAQ">
+					<a href="#none">
+						<span>지성</span>
+						<span>오일이 모공을 막아 여드름을 유발하나요?</span>
+					</a>
+				</li>																										
+			</ul>
+		</section>
+	</article>
+	<div class="footer">
+		<nav class="fixBottomNavi">
+			<a href="#none"><span class="sprite "></span>제품</a>
+			<a href="#none"><span class="sprite"></span>리뷰</a>
+			<a href="#none" class="active"><span class="sprite"></span>콘텐츠</a>
+			<a href="#none"><span class="sprite"></span>내정보</a>
+			<a href="#none"><span class="sprite"></span>더보기<span class="sprite new"></span></a>
+		</nav>
+	</div>		
+</body>
+</html>

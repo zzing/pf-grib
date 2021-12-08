@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+	<meta name="apple-mobile-web-app-capable" content="yes"/>
+	<link rel="stylesheet" href="./../../resources/api/css/reset.css">
+	<link rel="stylesheet" href="./../../resources/api/css/common.css">
+<!--[if lt IE 9]>
+	 <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+<![endif]-->
+	<script src="./../../resources/api/js/jquery-1.12.4.min.js"></script>
+	<title>CO-05-0 컨텐츠_용어Dictionary_카테고리</title>
+	<script>
+		$(document).ready(function(){
+			var _selectLink = $(".selectLink1");
+			$(".popupWrap").on({
+				click:function(e){
+					e.preventDefault();
+					var _currentTagName = e.target.tagName;
+					if(e.target.tagName == "A"){						
+						$(".popupWrap").fadeOut(function(){
+							$(".popLayout0").fadeOut();
+							_selectLink.text($(e.target).text());
+						});						
+					}
+				}
+			});
+			
+			$(".contactCategorySelect").on({
+				click:function(e){
+					e.preventDefault();
+					$(".pop0").show();
+					$(".popupWrap").fadeIn();
+				}
+			});
+		});	
+	</script>
+</head>
+<body>
+	<header class="btnArea">
+		<h1>카테고리</h1>
+		<a href="./CO-05.html" class="sprite btnClose">뒤로</a>		
+	</header>	
+	<article class="subContentsPBN">
+		<section class="topBorderB">
+			<ul class="listAccordionStyle1">
+				<li><h1><a href="#none">전체카테고리</a></h1></li>
+				<li class="contentsCategory">
+					<a href="#none">기능 in 기타</a>
+				</li>	
+				<li class="contentsCategory">
+					<a href="#none">기능 in 피부</a>
+				</li>
+				<li class="contentsCategory">
+					<a href="#none">기능 in 화장품</a>
+				</li>
+				<li class="contentsCategory">
+					<a href="#none">기능성 화장품고시 성분</a>
+				</li>
+				<li class="contentsCategory">
+					<a href="#none">기초제품</a>
+				</li>
+				<li class="contentsCategory">
+					<a href="#none">네일케어</a>
+				</li>
+				<li class="contentsCategory">
+					<a href="#none">립케어</a>
+				</li>
+				<li class="contentsCategory">
+					<a href="#none">베이스 메이크업</a>
+				</li>
+				<li class="contentsCategory">
+					<a href="#none">성분</a>
+				</li>
+				<li class="contentsCategory">
+					<a href="#none">활성성분</a>
+				</li>
+				<li class="contentsCategory">
+					<a href="#none">성분의 기능</a>
+				</li>																																																																						
+			</ul>
+		</section>
+	</article>
+</body>
+</html>

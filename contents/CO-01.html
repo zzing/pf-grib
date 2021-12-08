@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+	<meta name="apple-mobile-web-app-capable" content="yes"/>
+<!--
+	<link rel="shortcut icon" href="icon.png">
+	<link rel="apple-touch-icon" href="iphone_icon.png.png">
+	<link rel="apple-touch-startup-image" href="startup.png" />
+-->
+	<link rel="stylesheet" href="./../../resources/api/css/reset.css">
+	<link rel="stylesheet" href="./../../resources/api/css/common.css">
+	<link rel="stylesheet" href="./../../resources/api/css/jquery-ui.css">	
+	<link rel="stylesheet" href="./../../resources/api/css/jquery-ui.custom.css">	
+	<script src="./../../resources/api/js/jquery-1.12.4.min.js"></script>
+	<script src="./../../resources/api/js/jquery-ui.min.js"></script>
+	<script src="./../../resources/api/js/aoc_common.js"></script>
+	<script>
+		$(document).ready(function(){
+			$(".hasAutoDele").on("keyup", gfn_onHasAuoDele);
+			highlightAutocomplete();
+			
+			$( function() {
+			    var availableTags = [
+					"글리세레스-12",
+					"글리세레스-18",
+					"글리세레스-18에칠헥사노에이트",
+					"글리세레스-7하이드록시스테아레이트/아이피디아이코폴리머",
+					"글리세로포스포콜린",
+					"글리세린",
+					"글리세린/말로진애씨드코폴리머"
+			    ];
+			   			    
+			    $( "#productBrandSearch" ).autocomplete({
+					source: availableTags,
+					classes:{"ui-autocomplete":"fixedAutocomplete"},
+					_renderMenu: function( ul, items ){
+				        var self = this;
+				        $.each( items, function( index, item ){
+				            self._renderItem( ul, item );
+				        });
+				    },
+				    _renderItem: function( ul, item){
+				        return $( "<li></li>" ).data( "item.autocomplete", item ).append( "<a>" + item.label + "</a>" ).appendTo( ul );
+				    }
+			    });
+			});
+			function highlightAutocomplete() {
+		        var oldFn = $.ui.autocomplete.prototype._renderItem;
+
+		        $.ui.autocomplete.prototype._renderItem = function( ul, item){
+		            var re = new RegExp("^" + this.term);
+		            var t = item.label.replace(re, "<mark>" + this.term + "</mark>");
+		            return $( "<li></li>" )
+		                .data( "item.autocomplete", item )
+		                .append( "<a href='./../PR-02-1.html'>" + t + "</a>" )
+		                .appendTo( ul );
+		        };
+		    }
+		});
+	</script>
+	
+<!--[if lt IE 9]>
+	 <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+<![endif]-->
+	<title>CO-01 (콘텐츠 > 제품_검색_인기검색어)</title>
+</head>
+<body>
+	<header class="btnArea btnArea1">
+		<a href="./CO-00.html" class="sprite btnBack">Back</a>
+		<input type="text" id="productBrandSearch" class="hasAutoDele" placeholder="제품명 또는 브랜드명을 입력하세요"/>	
+	</header>
+	<article class="subContentsPBN">
+		<section class="topTabWrap fixedTitle">
+			<ul class="topTabTitle module2">
+				<li class="active"><a href="./../product/PR-01-1.html">인기 검색어</a></li>
+				<li><a href="./../product/PR-01-2.html">최근 검색어</a></li>
+			</ul>			
+		</section>
+		<section class="popularSearchWord">
+			<ul class="listStyle1">
+			<!-- S Description: 최대 10개의 리스트 -->
+				<li><a href="./../product/PR-02-1.html">설화수</a></li>
+				<li><a href="./../product/PR-02-1.html">뉴스킨</a></li>
+				<li><a href="./../product/PR-02-1.html">피지오겔</a></li>
+				<li><a href="./../product/PR-02-1.html">로레알 헤어</a></li>
+				<li><a href="./../product/PR-02-1.html">암웨이</a></li>
+				<li><a href="./../product/PR-02-1.html">애터미</a></li>				
+			</ul>
+		</section>
+	</article>
+</body>
+</html>

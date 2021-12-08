@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+	<meta name="apple-mobile-web-app-capable" content="yes"/>
+<!--
+	<link rel="shortcut icon" href="icon.png">
+	<link rel="apple-touch-icon" href="iphone_icon.png.png">
+	<link rel="apple-touch-startup-image" href="startup.png" />
+-->
+	<link rel="stylesheet" href="./../../resources/api/css/reset.css">
+	<link rel="stylesheet" href="./../../resources/api/css/common.css">	
+	<link rel="stylesheet" href="./../../resources/api/css/jquery-ui.css">	
+	<link rel="stylesheet" href="./../../resources/api/css/jquery-ui.custom.css">	
+	<script src="./../../resources/api/js/jquery-1.12.4.min.js"></script>
+	<script src="./../../resources/api/js/jquery-ui.min.js"></script>
+	<script src="./../../resources/api/js/aoc_common.js"></script>
+	<script>
+		$(document).ready(function(){
+			$(".hasAutoDele").on("keyup", gfn_onHasAuoDele);
+			
+			$(".fixBottomNavi a").on({
+				click:function(e){
+					e.preventDefault();
+					if($(this).hasClass("active")){
+						$(this).removeClass("active");
+					}else{
+						$(this).addClass("active").siblings().removeClass("active");
+					}
+				}
+			});
+			$(".listStyle0 li a").on({
+				click:function(){
+					console.log("here");
+				}
+			});
+		});
+	</script>
+	
+<!--[if lt IE 9]>
+	 <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+<![endif]-->
+	<title>CO-02-1 (콘텐츠 > 검색결과_컬럼)</title>
+</head>
+<body>
+	<header class="btnArea btnArea1">
+		<a href="./CO-01.html" class="sprite btnBack">Back</a>
+		<input type="text" class="hasAutoDele">	
+	</header>	
+	<article class="subContents">
+		<section class="topTabWrap fixedTitle topTabTitleBN">
+			<ul class="topTabTitle module3 ">
+				<li class="active"><a href="./CO-02-1.html">Column</a></li>
+				<li><a href="./CO-02-2.html">스킨케어 FAQ</a></li>
+				<li><a href="./CO-02-3.html">용어 Dictionary</a></li>
+			</ul>			
+		</section>
+		<p class="paragraphStyle0">10개의 콘텐츠가 검색되었습니다.</p>
+	
+		<!-- CASE 1 : 검색 결과가 없는 경우 :<section class="contentSearchBox noData">-->
+	 
+		<!-- CASE 2 : 검색 결과가 있는 경우 S -->
+	 	<section class="contentSearchBox">
+	 		<span class="spriteBefore">검색 결과가 없습니다.</span> 
+			<ul class="listStyle0">
+				<li class="tab_ColumnList">
+					<div class="defaultAocTxt1">
+						<div class="imgWrap"><img src="./../../resources/api/images/dummy/dummy_contentsTab0-0_75x75.png" alt="Theme19"></div>
+					</div>
+					<div class="listRightBox">
+						<p>Theme 19. 자외선을 차단하는 또 다른 방법들?? 입고, 걸치고, 쓰고</p>
+					</div>
+					<div class="reactBox">
+						<span><span class="like sprite"></span>20</span>
+						<span><span class="comment sprite"></span>10</span>
+					</div>
+					<a href="./CO-03-1.html" class="detail_link"></a>
+				</li>
+				<li class="tab_ColumnList">
+					<div class="defaultAocTxt1">
+						<div class="imgWrap"><img src="./../../resources/api/images/dummy/dummy_contentsTab0-1_75x75.png" alt="Theme9"></div>
+					</div>
+					<div class="listRightBox">
+						<p>Theme 9. 근데 자외선 차단제도 위험하지 않아?</p>
+					</div>
+					<div class="reactBox">
+						<span><span class="like sprite"></span>7</span>
+						<span><span class="comment sprite"></span>6</span>
+					</div>
+					<a href="./CO-03-1.html" class="detail_link"></a>
+				</li>
+				<li class="tab_ColumnList">
+					<div class="defaultAocTxt1">
+						<div class="imgWrap"><img src="./../../resources/api/images/dummy/dummy_contentsTab0-2_75x75.png" alt="Theme6"></div>
+					</div>
+					<div class="listRightBox">
+						<p>Theme 6. 어린이들은 어떤 자외선 차단제를 사용하는게 좋을까?</p>
+					</div>
+					<div class="reactBox">
+						<span><span class="like sprite"></span>234</span>
+						<span><span class="comment sprite"></span>36</span>
+					</div>
+					<a href="./CO-03-1.html" class="detail_link"></a>			
+				</li>
+				<li class="tab_ColumnList">
+					<div class="defaultAocTxt1">
+						<div class="imgWrap"><img src="./../../resources/api/images/dummy/dummy_contentsTab0-3_75x75.png" alt="Theme1"></div>
+					</div>
+					<div class="listRightBox">
+						<p>Theme 1. 자외선 차단제 바르게 읽기~ PART2</p>
+					</div>
+					<div class="reactBox">
+						<span><span class="like sprite"></span>0</span>
+						<span><span class="comment sprite"></span>0</span>
+					</div>			
+					<a href="./CO-03-1.html" class="detail_link"></a>
+				</li>
+				<li class="tab_ColumnList">
+					<div class="defaultAocTxt1">
+						<div class="imgWrap"><img src="./../../resources/api/images/dummy/dummy_contentsTab0-3_75x75.png" alt="Theme1"></div>
+					</div>
+					<div class="listRightBox">
+						<p>Theme 1. 자외선 차단제 바르게 읽기~ PART2</p>
+					</div>
+					<div class="reactBox">
+						<span><span class="like sprite"></span>0</span>
+						<span><span class="comment sprite"></span>0</span>
+					</div>			
+					<a href="./CO-03-1.html" class="detail_link"></a>
+				</li>
+				<li class="tab_ColumnList">
+					<div class="defaultAocTxt1">
+						<div class="imgWrap"><img src="./../../resources/api/images/dummy/dummy_contentsTab0-3_75x75.png" alt="Theme1"></div>
+					</div>
+					<div class="listRightBox">
+						<p>Theme 1. 자외선 차단제 바르게 읽기~ PART2</p>
+					</div>
+					<div class="reactBox">
+						<span><span class="like sprite"></span>0</span>
+						<span><span class="comment sprite"></span>0</span>
+					</div>
+					<a href="./CO-03-1.html" class="detail_link"></a>			
+				</li>
+			</ul>
+		</section>
+		<!-- 검색 결과가 있는 경우 E -->	
+	</article>
+	<div class="footer">
+		<nav class="fixBottomNavi">
+			<a href="#none"><span class="sprite "></span>제품</a>
+			<a href="#none"><span class="sprite"></span>리뷰</a>
+			<a href="#none" class="active"><span class="sprite"></span>콘텐츠</a>
+			<a href="#none"><span class="sprite"></span>내정보</a>
+			<a href="#none" class="new"><span class="sprite"></span>기타<span class="sprite new"></span></a>
+		</nav>
+	</div>
+</body>
+</html>

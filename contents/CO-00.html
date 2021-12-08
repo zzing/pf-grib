@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+	<meta name="apple-mobile-web-app-capable" content="yes"/>
+	<link rel="stylesheet" href="./../../resources/api/css/reset.css">
+	<link rel="stylesheet" href="./../../resources/api/css/common.css">	
+<!--[if lt IE 9]>
+	 <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+<![endif]-->
+	<title>CO-00 콘텐츠_메인</title>
+	<link rel="stylesheet" href="./../../resources/api/css/jquery.bxslider.css">
+	<link rel="stylesheet" href="./../../resources/api/css/jquery.bxslider.custom.css">
+	<script src="./../../resources/api/js/jquery-1.12.4.min.js"></script>
+	<script src="./../../resources/api/js/jquery.bxslider.js"></script>
+	
+	<script>
+		$(document).ready(function(){
+			$('.bxslider').bxSlider({
+				controls:false		
+			});
+			
+			$(".fixBottomNavi a").on({
+				click:function(e){
+					e.preventDefault();
+					if($(this).hasClass("active")){
+						$(this).removeClass("active");
+					}else{
+						$(this).addClass("active").siblings().removeClass("active");
+					}
+				}
+			});
+		});
+	</script>
+</head>
+<body>
+	<header>
+		<h1>CONTENTS</h1>		
+		<a href="./CO-01.html" class="sprite btnSearch"></a>
+	</header>	
+	<article class="subContents topBorderN">
+	<!-- 콘텐츠 메인 > Column S -->
+		<section class="designBox0 contentsBox0">
+			<div class="designBox0Title contentsTitle">
+				<h1>Column</h1>
+				<a href="./CO-03.html" class="sprite more">더보기</a>
+			</div>
+			<ul class="listStyle0 contentsBannerList bxslider">
+				<li>
+					<img src="./../../resources/api/images/dummy/dummy_contents_column0_720x400.png" alt="배너이미지1">					
+					<a href="./CO-03-1.html"></a>
+				</li>
+				<li>
+					<img src="./../../resources/api/images/dummy/dummy_contents_column0_720x400.png" alt="배너이미지1">					
+					<a href="./CO-03-1.html"></a>
+				</li>
+				<li>
+					<img src="./../../resources/api/images/dummy/dummy_contents_column0_720x400.png" alt="배너이미지1">					
+					<a href="./CO-03-1.html"></a>
+				</li>										
+			</ul>
+		</section>
+	<!-- 콘텐츠 메인 > Column E -->
+	<!-- 콘텐츠 메인 > 스킨케어 FAQ S -->
+		<section class="designBox0">
+			<div class="designBox0Title">
+				<h1>스킨케어 FAQ</h1>
+				<a href="./CO-04.html" class="sprite more">더보기</a>
+			</div>
+				<ul class="listStyle0">
+					<li class="contentsFAQ">
+						<a href="./CO-04-1.html">
+							<span>피부건조</span>
+							<span>전신적으로 사용 가능한 멀티 오일의 경우, 얼굴에 사용해도 괜찮을까요?</span>
+						</a>
+					</li>
+					<li class="contentsFAQ">
+						<a href="./CO-04-1.html">
+							<span>페이스</span>
+							<span>세안의 마지막 단계의 찬물 패팅, 꼭 해야한다?</span>
+						</a>
+					</li>
+					<li class="contentsFAQ">
+						<a href="./CO-04-1.html">
+							<span>자외선 차단</span>
+							<span>자외선 차단제를 사용할 때 꼭 지켜야 할 룰이 있다면?</span>
+						</a>
+					</li>					
+				</ul>
+		</section>
+	<!-- 콘텐츠 메인 > 스킨케어 FAQ E -->	
+		<section class="designBox0">
+			<ul class="contentsListStyle0">
+				<li>
+					<h1>문의하기</h1>
+					<p>궁금한 점이 있으면 물어보세요!</p>
+					<a href="./../more/MO-06.html">전문가에게 문의하기</a>
+				</li>
+				<li class="list01">
+					<h1>용어 Dictionary</h1>
+					<p>궁금한 용어가 있다면 찾아보세요!</p>
+					<a href="./CO-05.html">용어 찾아보기</a>
+				</li>
+			</ul>
+		</section>				
+	</article>
+	<div class="footer">
+		<nav class="fixBottomNavi">
+			<a href="#none"><span class="sprite "></span>제품</a>
+			<a href="#none"><span class="sprite"></span>리뷰</a>
+			<a href="#none" class="active"><span class="sprite"></span>콘텐츠</a>
+			<a href="#none"><span class="sprite"></span>내정보</a>
+			<a href="#none"><span class="sprite"></span>더보기<span class="sprite new"></span></a>
+		</nav>
+	</div>	
+</body>
+</html>

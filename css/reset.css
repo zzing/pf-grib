@@ -1,0 +1,27 @@
+@charset "utf-8";
+
+body, p, h1, h2, h3, h4, h5, h6, ul, ol, li, dl, dt, dd, table, th, td, form, fieldset, legend, input, textarea, button, select {margin:0;padding:0}
+body, input, textarea, select, button, table {font-size:14px;font-family:"NotoSansKR";color:#4c4c4c}
+article, aside, hgroup, header, footer, figure, figcaption, nav, section {display:block}
+img, fieldset,iframe {border:0}
+img {vertical-align: middle}
+ul, ol {list-style: none}
+em, address {font-style:normal}
+a {text-decoration:none}
+a:hover, a:active, a:focus{text-decoration:none}
+caption{height:0;line-height:0;font-size:0}
+input,textarea{border:1px solid #d7d7d7}
+textarea{overflow-y:auto;resize:none}
+
+@font-face{
+	font-family:NotoSansKR;
+	font-weight:500;
+	src:url('./../font/NotoSansKR-Medium.eot');
+	src:local('♬'),url('./../font/NotoSansKR-Medium.woff') format('woff');
+}
+@font-face{
+	font-family:NotoSansKR;
+	font-weight:400;
+	src:url('./../font/NotoSansKR-Regular.eot');
+	src:local('♬'),url('./../font/NotoSansKR-Regular.woff') format('woff');
+}

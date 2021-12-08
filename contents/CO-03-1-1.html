@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+	<meta name="apple-mobile-web-app-capable" content="yes"/>
+<!--
+	<link rel="shortcut icon" href="icon.png">
+	<link rel="apple-touch-icon" href="iphone_icon.png.png">
+	<link rel="apple-touch-startup-image" href="startup.png" />
+-->
+	<link rel="stylesheet" href="./../../resources/api/css/reset.css">
+	<link rel="stylesheet" href="./../../resources/api/css/common.css">	
+	<script src="./../../resources/api/js/jquery-1.12.4.min.js"></script>
+	
+	<script>
+		$(document).ready(function(){
+			$(".fixBottomNavi a").on({
+				click:function(e){
+					e.preventDefault();
+					if($(this).hasClass("active")){
+						$(this).removeClass("active");
+					}else{
+						$(this).addClass("active").siblings().removeClass("active");
+					}
+				}
+			});
+			
+		/* S Popup */
+			var _isSelect;
+			var _dataClassName;
+			var _popId;
+		
+			$(".popupWrap").on({
+				touchmove:function(e){
+					e.preventDefault();				
+				},
+				click:function(e){
+					e.preventDefault();
+					var _currentTagName = e.target.tagName;
+					if(e.target.tagName == "A"){
+						$(".popupWrap").fadeOut(function(){							
+							$("#" + _popId).fadeOut();						
+							if( _isSelect){
+								$("." + _dataClassName).text($(e.target).text());
+							}
+						});						
+					}
+				}
+			});
+		
+			$(".btnClose, .btnConfirm").on({
+				click:function(e){
+					_dataClassName = $(e.target).attr("data-className");
+					_popId;					
+					switch(_dataClassName){
+						case "btnClose":
+							_popId = "pop0";
+							_isSelect = false;
+							break;
+						case "btnConfirm":
+							_popId = "pop1";
+							_isSelect = false;
+							break;
+					}
+					
+					$(".popupWrap").fadeIn(function(){
+						marginTopMiddle( _popId );
+						$("#" + _popId).fadeIn();
+					});
+				}
+			});
+			
+			function marginTopMiddle( _select ){				
+				var _popLayoutMT = $("#" + _select).outerHeight()/2 * (-1);
+				$("#" + _select).css({"margin-top":_popLayoutMT});
+			}
+			
+			/* E Popup */
+			
+		/* S Tab 제어 관련 */
+			var _currentTabActive = $(".topTabWrap li.active").index();
+			
+			$(".tabContentWrap > li:eq(" + _currentTabActive + ")").show().siblings("li").hide();
+			
+			$(".topTabTitle a").on({
+				click:function(e){
+					e.preventDefault();
+					_currentTabActive = $(this).parent("li").index();
+					$(this).parent("li").addClass("active").siblings("li").removeClass("active");
+					$(".tabContentWrap > li:eq(" + _currentTabActive + ")").show().siblings("li").hide();
+				}
+			});
+		/* E Tab 제어 관련 */
+		});
+	</script>
+	
+<!--[if lt IE 9]>
+	 <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+<![endif]-->
+	<title>CO-03-1-1 (컨텐츠 > 컨텐츠_상세_댓글쓰기)</title>
+</head>
+<body>	
+	<header class="btnArea">
+		<h1>댓글 쓰기</h1>
+		<a href="#none" class="sprite btnClose" data-className="btnClose">Close</a>
+		<!-- <a href="#none" class="btnConfirm" data-className="btnConfirm">등록</a> -->	
+	</header>
+	<article class="subContentsPBN">
+		<section class="topBorderN">	
+			<div class="designFormBox">	
+				<textarea class="textarea" placeholder="댓글을 작성해 주세요"></textarea>
+				<a href="#none" class="btnConfirm btnStyle1" data-className="btnConfirm">등록</a>
+			</div>			
+		</section>		
+	</article>
+	<!-- 팝업 S -->
+	<article class="popupWrap">
+		<section class="popLayout1 popDesignFormBox" id="pop0">
+			<div class="popNotice"><span>입력한 내용은 저장되지 않고<br>자동으로 삭제됩니다.<br>닫으시겠습니까?</span></div>
+			<div class="popBtnWrap twice">
+				<a href="#none">취소</a>
+				<a href="#none">확인</a>
+			</div>			
+		</section>
+		<section class="popLayout1 popDesignFormBox" id="pop1">
+			<div class="popNotice"><span>등록되었습니다.</span></div>
+			<div class="popBtnWrap once">				
+				<a href="#none">확인</a>
+			</div>			
+		</section>	
+	</article>	
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+	<meta name="apple-mobile-web-app-capable" content="yes"/>
+<!--
+	<link rel="shortcut icon" href="icon.png">
+	<link rel="apple-touch-icon" href="iphone_icon.png.png">
+	<link rel="apple-touch-startup-image" href="startup.png" />
+-->
+	<link rel="stylesheet" href="./../../resources/api/css/reset.css">
+	<link rel="stylesheet" href="./../../resources/api/css/common.css">
+	<link rel="stylesheet" href="./../../resources/api/css/jquery-ui.css">	
+	<link rel="stylesheet" href="./../../resources/api/css/jquery-ui.custom.css">	
+	<script src="./../../resources/api/js/jquery-1.12.4.min.js"></script>
+	<script src="./../../resources/api/js/jquery-ui.min.js"></script>
+	<script src="./../../resources/api/js/aoc_common.js"></script>
+	<script>
+		$(document).ready(function(){
+			$(".hasAutoDele").on("keyup", gfn_onHasAuoDele);
+			
+			$(".fixBottomNavi a").on({
+				click:function(e){
+					e.preventDefault();
+					if($(this).hasClass("active")){
+						$(this).removeClass("active");
+					}else{
+						$(this).addClass("active").siblings().removeClass("active");
+					}
+				}
+			});
+		});
+	</script>
+	
+<!--[if lt IE 9]>
+	 <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+<![endif]-->
+	<title>CO-02-2 (콘텐츠 > 검색결과_스킨케어FAQ)</title>
+</head>
+<body>
+	<header class="btnArea btnArea1">
+		<a href="./CO-01.html" class="sprite btnBack">Back</a>
+		<input type="text" class="hasAutoDele">
+	</header>	
+	<article class="subContents">
+		<section class="topTabWrap fixedTitle topTabTitleBN">
+			<ul class="topTabTitle module3">
+				<li><a href="./CO-02-1.html">Column</a></li>
+				<li class="active"><a href="./CO-02-2.html">스킨케어 FAQ</a></li>
+				<li><a href="./CO-02-3.html">용어 Dictionary</a></li>
+			</ul>			
+		</section>
+		<p class="paragraphStyle0">8개의 콘텐츠가 검색되었습니다.</p>
+	
+		<!-- CASE 1 : 검색 결과가 없는 경우 :<section class="contentSearchBox noData">-->
+	
+		<!-- CASE 2 : 검색 결과가 있는 경우 S -->	
+		<section class="contentSearchBox">
+			<ul class="listStyle0">
+				<li class="contentsFAQ">
+					<a href="./CO-04-1.html">
+						<span>자외선차단</span>
+						<span>자외선 차단제를 사용할 때 꼭 지켜야 할 룰이 있다면?</span>
+					</a>
+				</li>
+				<li class="contentsFAQ">
+					<a href="./CO-04-1.html">
+						<span>자외선차단</span>
+						<span>완벽한 자외선 차단을 위해서는 얼마나 자주 덧바를 것이 좋을까요?</span>
+					</a>
+				</li>
+				<li class="contentsFAQ">
+					<a href="./CO-04-1.html">
+						<span>자외선차단</span>
+						<span>자외선 차단제는 로션과 크림 중 어떤 것이 더 좋은가요?</span>
+					</a>
+				</li>
+				<li class="contentsFAQ">
+					<a href="./CO-04-1.html">
+						<span>자외선차단</span>
+						<span>요즘 자외선 차단제 트렌드는 무엇인가요?</span>
+					</a>
+				</li>
+				<li class="contentsFAQ">
+					<a href="./CO-04-1.html">
+						<span>자외선차단</span>
+						<span>자외선 차단제를 사용하면 특별한 클렌저를 사용해야 할까요?</span>
+					</a>
+				</li>
+				<li class="contentsFAQ">
+					<a href="./CO-04-1.html">
+						<span>자외선차단</span>
+						<span>스키장에 갈 때 자외선 차단제를 준비해야 하나요?</span>
+					</a>
+				</li>
+			</ul>
+		</section>
+		<!-- 검색 결과가 있는 경우 E -->
+	</article>
+	<div class="footer">
+		<nav class="fixBottomNavi">
+			<a href="#none"><span class="sprite "></span>제품</a>
+			<a href="#none"><span class="sprite"></span>리뷰</a>
+			<a href="#none" class="active"><span class="sprite"></span>콘텐츠</a>
+			<a href="#none"><span class="sprite"></span>내정보</a>
+			<a href="#none" class="new"><span class="sprite"></span>기타<span class="sprite new"></span></a>
+		</nav>
+	</div>
+</body>
+</html>

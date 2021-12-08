@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+	<meta name="apple-mobile-web-app-capable" content="yes"/>
+	<link rel="stylesheet" href="./../../resources/api/css/reset.css">
+	<link rel="stylesheet" href="./../../resources/api/css/common.css">
+<!--[if lt IE 9]>
+	 <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+<![endif]-->
+	<script src="./../../resources/api/js/jquery-1.12.4.min.js"></script>
+	<title>CO-03-0 컨텐츠_칼럼리스트_카테고리</title>
+	<script>
+		$(document).ready(function(){
+			$(".listAccordionStyle1 a").on({
+				click:function(e){
+					console.log(e.currentTarget)
+					var _target = $(e.currentTarget).next('ul')
+					var _isVisible = _target.is(":visible");
+					//e.preventDefault();
+					(_isVisible)?_target.slideUp(200):_target.slideDown(200);
+					if((_isVisible) == false){
+						$(this).find(".iconSlide").css({"background-image":"url(./../../resources/api/images/common/icon_slideUp.png)"})
+					}else{
+						$(this).find(".iconSlide").css({"background-image":"url(./../../resources/api/images/common/icon_slideDown.png)"})
+					} 
+				}
+			});
+		});	
+	</script>
+</head>
+<body>
+	<header class="btnArea">
+		<h1>카테고리</h1>
+		<a href="./CO-03.html" class="sprite btnClose">뒤로</a>		
+	</header>	
+	<article class="subContentsPBN">
+		<section class="topBorderB">
+			<ul class="listAccordionStyle1">
+				<li><h1><a href="#none">전체카테고리</a></h1></li>
+				<li class="contentsCategory">
+					<a href="#none">
+						Magazine
+						<span class="iconSlide"></span>
+					</a>
+					<ul>
+						<li><a href="./CO-03.html">아름다운 얼굴 만들기</a></li>
+						<li><a href="./CO-03.html">사랑스러운 입술~</a></li>
+						<li><a href="./CO-03.html">찰랑찰랑~헤어!!</a></li>
+						<li><a href="./CO-03.html">땀 그리고 친구들!!</a></li>
+						<li><a href="./CO-03.html">부드러운 손길~</a></li>
+						<li><a href="./CO-03.html">매력 포인트~네일!!</a></li>
+					</ul>
+				</li>
+				<li class="contentsCategory">
+					<a href="./CO-03.html">1.모든 것이 다른 피부 이야기~</a>
+				</li>
+				<li class="contentsCategory">
+					<a href="#none">
+						2.피부를 Balance 하다~
+						<span class="iconSlide"></span>
+					</a>
+					<ul>
+						<li><a href="./CO-03.html">아름다운 얼굴 만들기</a></li>
+						<li><a href="./CO-03.html">사랑스러운 입술~</a></li>
+						<li><a href="./CO-03.html">찰랑찰랑~헤어!!</a></li>
+						<li><a href="./CO-03.html">땀 그리고 친구들!!</a></li>
+						<li><a href="./CO-03.html">부드러운 손길~</a></li>
+						<li><a href="./CO-03.html">매력 포인트~네일!!</a></li>
+					</ul>
+				</li>
+				<li class="contentsCategory">
+					<a href="#none">
+						3.Upgrade Your Skin!!
+						<span class="iconSlide"></span>
+					</a>
+					<ul>
+						<li><a href="./CO-03.html">아름다운 얼굴 만들기</a></li>
+						<li><a href="./CO-03.html">사랑스러운 입술~</a></li>
+						<li><a href="./CO-03.html">찰랑찰랑~헤어!!</a></li>
+						<li><a href="./CO-03.html">땀 그리고 친구들!!</a></li>
+						<li><a href="./CO-03.html">부드러운 손길~</a></li>
+						<li><a href="./CO-03.html">매력 포인트~네일!!</a></li>
+					</ul>
+				</li>
+				<li class="contentsCategory">
+					<a href="#none">
+						4.머리 끝부터 발끝까지~
+						<span class="iconSlide"></span>
+					</a>
+					<ul>
+						<li><a href="./CO-03.html">아름다운 얼굴 만들기</a></li>
+						<li><a href="./CO-03.html">사랑스러운 입술~</a></li>
+						<li><a href="./CO-03.html">찰랑찰랑~헤어!!</a></li>
+						<li><a href="./CO-03.html">땀 그리고 친구들!!</a></li>
+						<li><a href="./CO-03.html">부드러운 손길~</a></li>
+						<li><a href="./CO-03.html">매력 포인트~네일!!</a></li>
+					</ul>
+				</li>
+				<li class="contentsCategory">
+					<a href="#none">
+						5.피부&amp;화장품과 일촌맺기~
+						<span class="iconSlide"></span>
+					</a>
+					<ul>
+						<li><a href="./CO-03.html">아름다운 얼굴 만들기</a></li>
+						<li><a href="./CO-03.html">사랑스러운 입술~</a></li>
+						<li><a href="./CO-03.html">찰랑찰랑~헤어!!</a></li>
+						<li><a href="./CO-03.html">땀 그리고 친구들!!</a></li>
+						<li><a href="./CO-03.html">부드러운 손길~</a></li>
+						<li><a href="./CO-03.html">매력 포인트~네일!!</a></li>
+					</ul>
+				</li>
+				<li class="contentsCategory">
+					<a href="#none">
+						6.요람에서 무덤까지~
+						<span class="iconSlide"></span>
+					</a>
+					<ul>
+						<li><a href="./CO-03.html">아름다운 얼굴 만들기</a></li>
+						<li><a href="./CO-03.html">사랑스러운 입술~</a></li>
+						<li><a href="./CO-03.html">찰랑찰랑~헤어!!</a></li>
+						<li><a href="./CO-03.html">땀 그리고 친구들!!</a></li>
+						<li><a href="./CO-03.html">부드러운 손길~</a></li>
+						<li><a href="./CO-03.html">매력 포인트~네일!!</a></li>
+					</ul>
+				</li>
+				<li class="contentsCategory">
+					<a href="#none">
+						7.계절별 피부관리
+						<span class="iconSlide"></span>
+					</a>
+					<ul>
+						<li><a href="./CO-03.html">아름다운 얼굴 만들기</a></li>
+						<li><a href="./CO-03.html">사랑스러운 입술~</a></li>
+						<li><a href="./CO-03.html">찰랑찰랑~헤어!!</a></li>
+						<li><a href="./CO-03.html">땀 그리고 친구들!!</a></li>
+						<li><a href="./CO-03.html">부드러운 손길~</a></li>
+						<li><a href="./CO-03.html">매력 포인트~네일!!</a></li>
+					</ul>
+				</li>
+				<li class="contentsCategory">
+					<a href="#none">
+						8.트러블별 피부관리
+						<span class="iconSlide"></span>
+					</a>
+					<ul>
+						<li><a href="./CO-03.html">아름다운 얼굴 만들기</a></li>
+						<li><a href="./CO-03.html">사랑스러운 입술~</a></li>
+						<li><a href="./CO-03.html">찰랑찰랑~헤어!!</a></li>
+						<li><a href="./CO-03.html">땀 그리고 친구들!!</a></li>
+						<li><a href="./CO-03.html">부드러운 손길~</a></li>
+						<li><a href="./CO-03.html">매력 포인트~네일!!</a></li>
+					</ul>
+				</li>																																
+			</ul>
+		</section>
+	</article>
+</body>
+</html>

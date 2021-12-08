@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+	<meta name="apple-mobile-web-app-capable" content="yes"/>
+<!--
+	<link rel="shortcut icon" href="icon.png">
+	<link rel="apple-touch-icon" href="iphone_icon.png.png">
+	<link rel="apple-touch-startup-image" href="startup.png" />
+-->
+	<link rel="stylesheet" href="./../../resources/api/css/reset.css">
+	<link rel="stylesheet" href="./../../resources/api/css/common.css">
+	<script src="./../../resources/api/js/jquery-1.12.4.min.js"></script>
+	
+	<script>
+		$(document).ready(function(){
+			$(".fixBottomNavi a").on({
+				click:function(e){
+					e.preventDefault();
+					if($(this).hasClass("active")){
+						$(this).removeClass("active");
+					}else{
+						$(this).addClass("active").siblings().removeClass("active");
+					}
+				}
+			});
+		});
+	</script>
+	
+<!--[if lt IE 9]>
+	 <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+<![endif]-->
+	<title>CO-05-1 (컨텐츠 > 용어 Dictionary 상세)</title>
+</head>
+<body>
+	<header class="btnArea">
+		<a href="#none" class="sprite btnBack">Back</a>
+		<h1>용어 Dictionary</h1>		
+	</header>
+	<article class="subContents topBorderB">	
+		<section class="contentsDetailBox">
+			<div class="detailBoxTitle dictionaryBox">
+				<h1>CAS 번호</h1>
+				<h2>CAS Number</h2>
+			</div>
+			<div class="detailBoxContents">
+				<p>
+					화장품의 각 성분들은 기관이나 국가, 학회 등에 따라 다양한 이름으로 불리우고 있다. CAS는 ‘Chemical Abstracts Service’의 약자로, CAS 번호는 각각의 화학물질을 구분하기 위해, CAS가 각 성분마다 붙여놓은 번호다.
+				</p>
+				<p>
+					현재 수천만 가지 이상의 화학물질에 고유번호가 붙어있는 것으로 알려져 있다.
+도서관에서 책을 쉽게 관리하기 위해, 책마다 번호를 매겨놓은 것과 비슷하다.
+고유번호로 관리되고 있는 만큼 헷갈릴 염려 없이, 빠르고 정확하게 원하는 성분을 찾을 수 있다는 장점이 있지만, 반대로 번호만 보고는 어떤 구조나 성상, 쓰임새를 갖는 성분인지 알기가 어려운 단점도 있다.
+				</p>
+				<p>
+					CAS는 미국화학협회 (ACS, American Chemical Society)의 주관으로 이루어지는 것으로, CAS 번호와 관련된 모든 저작권은 미국화학협회에 있다.
+				</p>
+			</div>
+		</section>
+	</article>
+	<div class="footer">
+		<nav class="fixBottomNavi">
+			<a href="#none"><span class="sprite "></span>제품</a>
+			<a href="#none"><span class="sprite"></span>리뷰</a>
+			<a href="#none" class="active"><span class="sprite"></span>콘텐츠</a>
+			<a href="#none"><span class="sprite"></span>내정보</a>
+			<a href="#none">더보기<span class="sprite new"></span></a>
+		</nav>
+	</div>
+</body>
+</html>

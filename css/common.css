@@ -1,0 +1,47 @@
+@charset "utf-8";
+
+/* reset */
+html,body{height:100%}
+body, p, h1, h2, h3, h4, h5, h6, ul, ol, li, dl, dt, dd, table, th, td, form, fieldset, legend, input, textarea, button, select {margin:0;padding:0}
+body, input, textarea, select, button, table {font-size:14px;font-family:"NotoSansKR";color:#4c4c4c}
+article, aside, hgroup, header, footer, figure, figcaption, nav, section {display:block}
+img, fieldset,iframe {border:0}
+img {vertical-align: middle}
+ul, ol {list-style: none}
+em, address {font-style:normal}
+a {text-decoration:none}
+a:hover, a:active, a:focus{text-decoration:none}
+caption{height:0;line-height:0;font-size:0}
+input,textarea{border:1px solid #d7d7d7}
+textarea{overflow-y:auto;resize:none}
+
+#wrap{padding:10px}
+#header{overflow:hidden;margin:10px auto}
+#header h1{text-align:center}
+#header ul{float:left;font-size:0}
+#header ul li{display:inline-block;margin-left:3px;background-color:#949cc8;border-radius:3px;font-size:15px}
+#header ul li.focus{background-color:#7f4a90}
+#header ul li:first-child{margin-left:0}
+#header ul li a{display:block;padding:0 5px;color:#fff}
+
+#main{position:relative}
+
+/* Admin tabMenu */
+.tab{position:relative;padding-top:47px;border-radius:3px}
+.tab li h1{position:absolute;top:0;left:0;width:33%;height:47px;padding-top:9px;background-color:#f0f0f0;box-sizing:border-box;text-align:center}
+.tab li.focus h1{background-color:#9171aa}
+.tab li h1 a{display:block;color:#fff;line-height:37px}
+.tab li:nth-child(2) > h1{width:34%; left:33%}
+.tab li:nth-child(3) > h1{left:67%}
+.tab li div{position:relative;display:none;width:100%}
+.tab li.focus div{display:block}
+table.tbIndex thead th{width:20%;padding:5px 0;border-left:1px solid #fff;background-color:#ad7fb0;color:#fff;text-align:center}
+table.tbIndex tbody th{border-top:1px solid #e9e9e9;border-left:1px solid #e9e9e9;text-align:center}
+table.tbIndex td{padding:5px 10px;border-top:1px solid #e9e9e9;border-left:1px solid #e9e9e9}
+table td.pageLink{text-align:right}
+
+/* Common */
+table{width:100%;border:1px solid #e9e9e9;border-spacing:0}
+table.tbIndex{border-left:0}
+table thead th:first-child{border-left:0}
+table tbody tr:first-child th{border-top:0}

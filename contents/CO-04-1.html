@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+	<meta name="apple-mobile-web-app-capable" content="yes"/>
+<!--
+	<link rel="shortcut icon" href="icon.png">
+	<link rel="apple-touch-icon" href="iphone_icon.png.png">
+	<link rel="apple-touch-startup-image" href="startup.png" />
+-->
+	<link rel="stylesheet" href="./../../resources/api/css/reset.css">
+	<link rel="stylesheet" href="./../../resources/api/css/common.css">
+	<link rel="stylesheet" href="./../../resources/api/css/jquery-ui.css">	
+	<link rel="stylesheet" href="./../../resources/api/css/jquery-ui.custom.css">	
+	<script src="./../../resources/api/js/jquery-1.12.4.min.js"></script>
+	<script src="./../../resources/api/js/jquery-ui.min.js"></script>
+	
+	<script>
+		$(document).ready(function(){
+			$(".fixBottomNavi a").on({
+				click:function(e){
+					e.preventDefault();
+					if($(this).hasClass("active")){
+						$(this).removeClass("active");
+					}else{
+						$(this).addClass("active").siblings().removeClass("active");
+					}
+				}
+			});
+		});
+	</script>
+	
+<!--[if lt IE 9]>
+	 <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+<![endif]-->
+	<title>CO-04-1 (컨텐츠 > 스킨케어FAQ)</title>
+</head>
+<body>
+	<header class="btnArea">
+		<a href="#none" class="sprite btnBack">뒤로</a>
+		<h1>스킨케어 FAQ</h1>		
+	</header>	
+	<article class="subContents topBorderN">
+		<section class="contentsDetailBox">
+			<div class="detailBoxTitle">
+				<h1>미스트가 건조함을 유발한다? <br>정말인가요?</h1>
+			</div>
+			<div class="detailBoxContents">
+				<p>겨울철, 사무실의 공기는 건조하고, 온도는 높다보면, 피부가 당기고 건조함이 심하게 느껴지는 경우가 있습니다. 이럴때 주로 사용하는 아이템이 미스트인데.. 결론적으로 이런 환경에서는 미스트를 사용하면 더욱더 건조해 질 수 있으니 주의를 요합니다.</p>
+				<p>미스트는 일종의 보습제로 피부에 수분을 공급해주는 목적으로 사용합니다. 보습제에는 습윤제라고 하는 수분을 끌어당기는 성분이 포함되어 있는데, 외부의 습도가 70% 이상인 경우, 외부로 부터 물을 끌어당겨 피부에 유지시킬 수 있습니다. 이보다 건조한 경우라면, 오히려 피부 안쪽의 수분을 바깥으로 끌어내어 가장 중요한 피부 장벽의 수분을 유지하는 역할을 하게 됩니다. 여기에 ‘물’을 직접적으로 피부에 뿌려주면, 주변 습도가 낮은 경우, 피부표면의 물은 증발을 하게 되고, 이러한 과정에서 피부에 존재하는 기존 물까지 같이 가지고 나르는 상황이 발생합니다.</p>
+			</div>
+			<div class="contentsFaqMento">
+		<!-- EX 1: FAQ 작성자가 이창남 전문의일경우 nametag_1.jpg -->
+				<!-- <img src="./../../resources/api/images/doc_picture/nametag_1.jpg" alt="피부과 전문의 이창남"> -->
+		<!-- EX 2: FAQ 작성자가 김유정 전문의일경우 nametag_9.jpg -->
+				<img src="./../../resources/api/images/doc_picture/nametag_9.jpg" alt="피부과 전문의 김유정">
+			</div>
+		</section>			
+	</article>
+	<div class="footer">
+		<nav class="fixBottomNavi">
+			<a href="#none"><span class="sprite "></span>제품</a>
+			<a href="#none"><span class="sprite"></span>리뷰</a>
+			<a href="#none" class="active"><span class="sprite"></span>콘텐츠</a>
+			<a href="#none"><span class="sprite"></span>내정보</a>
+			<a href="#none"><span class="sprite"></span>더보기<span class="sprite new"></span></a>
+		</nav>
+	</div>			
+</body>
+</html>
